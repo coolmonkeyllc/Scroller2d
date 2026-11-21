@@ -14,6 +14,24 @@ Move a collectible in LevelEditor, save the level, and see the change in the Spr
 
 **[Watch the editor-to-game demo](https://scroller2d.com/videos/Scroller2D%20Editor%20to%20Game.mp4)**
 
+## Tutorials
+
+Start with a working example, then explore how Scroller2d fits into your game.
+
+- **[Run and edit Desert Ruins](https://scroller2d.com/Articles/desert-ruins-quickstart)**\
+  Run the iOS sample, move a collectible in LevelEditor, and see the change in SpriteKit.
+
+- **[Load a SpriteKit level from a plist](https://scroller2d.com/Articles/load-spritekit-level-from-plist)**\
+  Load level and catalog data, resolve overrides, and assemble configured scene objects.
+
+- **[Switch between character animation states](https://scroller2d.com/Articles/spritekit-animation-states)**\
+  Coordinate idle, running, jumping, and attack animations without restarting playback every frame.
+
+- **[What Scroller2d handles in a SpriteKit game](https://scroller2d.com/Articles/what-scroller2d-handles)**\
+  Understand what the editor and API provide and which responsibilities remain in your game.
+
+[Browse all SpriteKit tutorials →](https://scroller2d.com/Articles)
+
 ## About Scroller2d
 
 Are you looking for an easy to use SpriteKit helper that lowers anxiety and increases productivity?  Scroller2d allows you to quickly use helper objects, a visual editor, and defined configuration data to provide all the tools necessary unleash your inner creative.
