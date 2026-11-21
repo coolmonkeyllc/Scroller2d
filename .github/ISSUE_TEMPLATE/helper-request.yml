@@ -1,0 +1,35 @@
+name: Helper request
+description: Suggest a reusable helper or an improvement to an existing helper.
+title: "[Helper request]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the repeated work you would like Scroller2d to handle.
+        Issues are public. Remove API license keys, credentials, and private data from examples.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe a concrete game-development task and when it comes up. Mention the relevant existing helper if this is an improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How do you handle it today?
+      description: Explain your current workaround, repeated code, or what prevents you from implementing it. It is fine if you do not have a workaround yet.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What should the helper do?
+      description: Describe the inputs, resulting behavior, and an example of a successful result. A proposed Swift interface is optional.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Platforms, alternatives, and examples
+      description: Optional target platforms, related helpers, alternative approaches, or sanitized code examples that help explain the request.

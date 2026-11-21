@@ -12,6 +12,10 @@ This repository includes the demo source, artwork, audio, and matching Scroller2
 
 ## API license
 
+The demo Swift source is [MIT licensed](LICENSE) and may be reused commercially
+with the required notices. The API, LevelEditor, and assets have separate terms;
+see [component licensing](../LICENSING.md).
+
 The sample can run with a missing-license notice. To clear the notice, generate your own
 `api_license.plist` using **Generate api key** in a licensed copy of LevelEditor. Add it to
 the demo target's **Copy Bundle Resources** phase so it is copied to the app bundle root.

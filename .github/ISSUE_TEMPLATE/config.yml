@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Tutorials and sample quickstart
+    url: https://scroller2d.com/Articles
+    about: Find SpriteKit guides and instructions for running Desert Ruins.
+  - name: Private support
+    url: https://scroller2d.com/Contact
+    about: Use the contact page for account or licensing questions that need private support. Do not post license keys in public issues.

@@ -1,0 +1,56 @@
+name: Bug report
+description: Report a reproducible problem in LevelEditor, the API, or Desert Ruins.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the smallest example that reproduces the problem.
+        Issues are public. Remove API license keys, credentials, and private data from code, logs, screenshots, and attached files.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      options:
+        - LevelEditor
+        - Scroller2d API
+        - Desert Ruins sample
+        - Documentation
+        - Other or unsure
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Versions and environment
+      description: Include the Scroller2d or LevelEditor version, macOS version, and Xcode version and target platform when applicable. Say if you used a device or simulator.
+      placeholder: "API version or release: ...\nLevelEditor version: ...\nmacOS: ...\nXcode: ...\nTarget OS and device/simulator: ..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include a minimal code or level configuration example when useful. Mention whether the unmodified Desert Ruins sample has the same problem.
+      placeholder: "1. Open ...\n2. Configure ...\n3. Run ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Describe what happened and any error message. Screenshots can help with visual problems.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Optional sanitized console output or crash excerpt. Remove license keys and private information.
+      render: text

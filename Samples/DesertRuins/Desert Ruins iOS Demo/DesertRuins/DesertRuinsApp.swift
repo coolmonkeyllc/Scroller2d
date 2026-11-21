@@ -1,3 +1,7 @@
+// Copyright (c) 2026 Cool Monkey LLC
+// SPDX-License-Identifier: MIT
+// Demo Swift source only; see ../LICENSE for scope and terms.
+
 import SpriteKit
 import UIKit
 

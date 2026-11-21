@@ -1,0 +1,36 @@
+name: Integration question
+description: Ask how to use Scroller2d in your SpriteKit project.
+title: "[Question]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what you are building and where you are stuck.
+        The [tutorials](https://scroller2d.com/Articles) and [Desert Ruins sample](https://github.com/coolmonkeyllc/Scroller2d/tree/main/Samples/DesertRuins) may provide a useful starting point.
+        Issues are public. Remove API license keys, credentials, and private data before posting.
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to build?
+      description: Describe the behavior you want and the API classes or helpers you are using, if known.
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Where are you stuck?
+      description: Include what you tried and which documentation or sample you followed. If behavior is confusing, describe what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Versions and target platform
+      description: Include the Scroller2d version or release, Xcode version, and your target OS and device/simulator. Add the LevelEditor version if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Minimal example
+      description: Optional code or plist excerpt showing the integration. Use Markdown code fences for formatting and remove private data.

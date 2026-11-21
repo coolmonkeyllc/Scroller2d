@@ -88,6 +88,10 @@ Remove the argument for normal play.
 
 ## Licensing
 
+The demo Swift source is [MIT licensed](Desert%20Ruins%20iOS%20Demo/LICENSE) and may be reused commercially
+with the required notices. The API, LevelEditor, and assets have separate terms;
+see [component licensing](LICENSING.md).
+
 The sample can run with a missing-license notice. Scroller2d's data models are free to
 use; scene classes and runtime helpers require an API license. To clear the notice,
 generate your own `api_license.plist` in a licensed copy of LevelEditor, then add it to

@@ -41,3 +41,21 @@ Building a game is a time consuming and difficult task. You need to bring togeth
 Every level has repeatable core principles: background, floor (horizontal scrolling), enemies, obstacles, collectibles, checkpoints, and artifacts, etc.
 
 Using the data models only without the visual editor, classes, or object creators is free. You will never have to pay to organize your ideas and put them into action.
+
+## Questions and feedback
+
+Open an issue for integration questions, reproducible bugs, or helper requests:
+
+- [Report a bug](https://github.com/coolmonkeyllc/Scroller2d/issues/new?template=bug-report.yml)
+- [Ask an integration question](https://github.com/coolmonkeyllc/Scroller2d/issues/new?template=integration-question.yml)
+- [Request a helper](https://github.com/coolmonkeyllc/Scroller2d/issues/new?template=helper-request.yml)
+
+Include your Scroller2d version, target platform, and Xcode or LevelEditor version
+when relevant. Issues are public: remove license keys and other private information
+from code, logs, screenshots, and attachments before posting. For private account
+or licensing questions, use the [contact page](https://scroller2d.com/Contact).
+
+## Demo licensing
+
+The Desert Ruins demo Swift code is MIT licensed. The Scroller2d API, LevelEditor,
+and artwork have separate terms. See [component licensing](Samples/DesertRuins/LICENSING.md).
