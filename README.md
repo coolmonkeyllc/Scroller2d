@@ -4,7 +4,7 @@
 
 Scroller2d combines a Mac level editor with a Swift API for loading level data, constructing horizontal terrain, creating configured obstacles and enemies, and following characters with a camera.
 
-[Run the sample](https://scroller2d.com/Articles/desert-ruins-quickstart) · [Watch the demo](https://scroller2d.com/videos/Scroller2D%20Editor%20to%20Game.mp4) · [Read the tutorials](https://scroller2d.com/Articles)
+[Run the sample](Samples/DesertRuins/README.md) · [Watch the demo](https://scroller2d.com/videos/Scroller2D%20Editor%20to%20Game.mp4) · [Read the tutorials](https://scroller2d.com/Articles)
 
 ## See an edit become gameplay
 

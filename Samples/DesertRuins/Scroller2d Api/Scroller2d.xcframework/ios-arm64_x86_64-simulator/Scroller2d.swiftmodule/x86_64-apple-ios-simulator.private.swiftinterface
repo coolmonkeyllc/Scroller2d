@@ -1,0 +1,1968 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)
+// swift-module-flags: -target x86_64-apple-ios18.6-simulator -enable-objc-interop -enable-library-evolution -language-mode 6 -O -enable-experimental-feature DebugDescriptionMacro -module-name Scroller2d
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4.2
+import AppIntents
+import CryptoKit
+import Foundation
+import FoundationModels
+import GameplayKit
+import SpriteKit
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _SpriteKit_SwiftUI
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol SceneBaseCustomDelegate : AnyObject {
+  func didMoveScene(to view: SpriteKit::SKView)
+  func manageSceneCallbacks(action: Scroller2d::callbackType, function: Swift::String, object: Any?)
+  func updateScene(_ currentTime: Foundation::TimeInterval)
+  func didFinishSceneUpdate()
+}
+public protocol SceneBaseContactDelegate : AnyObject {
+  func didBeginContact(_ contact: SpriteKit::SKPhysicsContact)
+  func didEndContact(_ contact: SpriteKit::SKPhysicsContact)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency::MainActor @preconcurrency open class AppSharedSceneBase : SpriteKit::SKScene, @_Concurrency::MainActor SpriteKit::SKPhysicsContactDelegate {
+  @_Concurrency::MainActor @preconcurrency public var groundBaseVariants: [CoreFoundation::CGRect]
+  @_Concurrency::MainActor @preconcurrency public var collisionDirection: Scroller2d::pathDirection
+  @_Concurrency::MainActor @preconcurrency public var alternateSceneLocked: Swift::Bool
+  @_Concurrency::MainActor @preconcurrency public var alternateSceneLockedEndX: CoreFoundation::CGFloat
+  @_Concurrency::MainActor @preconcurrency public var soundFxEnabled: Swift::Bool
+  @_Concurrency::MainActor @preconcurrency public var damageOccurred: Swift::Bool
+  @_Concurrency::MainActor @preconcurrency public var deathOccurred: Swift::Bool
+  @_Concurrency::MainActor @preconcurrency public var logDebugMessages: Swift::Bool
+  @_Concurrency::MainActor @preconcurrency public var customDelegate: (any Scroller2d::SceneBaseCustomDelegate)?
+  @_Concurrency::MainActor @preconcurrency public var contactDelegate: (any Scroller2d::SceneBaseContactDelegate)?
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic open func didMove(to view: SpriteKit::SKView)
+  @_Concurrency::MainActor @preconcurrency @objc final public func didBegin(_ contact: SpriteKit::SKPhysicsContact)
+  @_Concurrency::MainActor @preconcurrency @objc final public func didEnd(_ contact: SpriteKit::SKPhysicsContact)
+  @_Concurrency::MainActor @preconcurrency @objc final override public func update(_ currentTime: Foundation::TimeInterval)
+  @_Concurrency::MainActor @preconcurrency @objc final override public func didFinishUpdate()
+  @_Concurrency::MainActor @preconcurrency public func retrieveTexture(atlasName: Swift::String) -> SpriteKit::SKTexture
+  @_Concurrency::MainActor @preconcurrency public func retrieveTexture(atlasName: Swift::String) -> [SpriteKit::SKTexture]
+  @_Concurrency::MainActor @preconcurrency public func preloadCache(atlasName: Swift::String)
+  @_Concurrency::MainActor @preconcurrency public func dispenseCache()
+  @_Concurrency::MainActor @preconcurrency public func determineGroundBaseY(x: CoreFoundation::CGFloat) -> CoreFoundation::CGFloat
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public init(size: CoreFoundation::CGSize)
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public init()
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation::NSCoder)
+  @objc deinit
+}
+@objc @_Concurrency::MainActor @preconcurrency open class SKSpriteNode2dBase : Scroller2d::SKSpriteNodeSharedBase {
+  @_Concurrency::MainActor @preconcurrency public var checkpointValue: CoreFoundation::CGFloat
+  @_Concurrency::MainActor @preconcurrency public var distance: Swift::Double
+  @_Concurrency::MainActor @preconcurrency public var extra: Swift::String
+  @_Concurrency::MainActor @preconcurrency public var extraNumber: Swift::Int
+  @_Concurrency::MainActor @preconcurrency public var triggerLetterbox: Swift::Bool
+  @_Concurrency::MainActor @preconcurrency public var velocity: CoreFoundation::CGVector?
+  @_Concurrency::MainActor @preconcurrency public var jointPin: SpriteKit::SKPhysicsJointPin?
+  @_Concurrency::MainActor @preconcurrency public var distanceXRange: Swift::ClosedRange<CoreFoundation::CGFloat>
+  @_Concurrency::MainActor @preconcurrency public var distanceYRange: Swift::ClosedRange<CoreFoundation::CGFloat>
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation::NSCoder)
+  @_Concurrency::MainActor @preconcurrency public init(imageName: Swift::String, name: Swift::String, position: CoreFoundation::CGPoint, size: CoreFoundation::CGSize = CGSize.zero, anchorPoint: CoreFoundation::CGPoint, zPosition: CoreFoundation::CGFloat, gameScene: Scroller2d::AppSharedSceneBase, allowedTimesToHit: Swift::Int = 1, offsetHealthBar: CoreFoundation::CGPoint = .zero)
+  @_Concurrency::MainActor @preconcurrency public init(texture: SpriteKit::SKTexture, name: Swift::String, position: CoreFoundation::CGPoint, size: CoreFoundation::CGSize = CGSize.zero, anchorPoint: CoreFoundation::CGPoint, zPosition: CoreFoundation::CGFloat, gameScene: Scroller2d::AppSharedSceneBase, allowedTimesToHit: Swift::Int = 1, offsetHealthBar: CoreFoundation::CGPoint = .zero)
+  @_Concurrency::MainActor @preconcurrency public init(imageName: Swift::String, name: Swift::String, size: CoreFoundation::CGSize = CGSize.zero, anchorPoint: CoreFoundation::CGPoint, zPosition: CoreFoundation::CGFloat, gameScene: Scroller2d::AppSharedSceneBase, allowedTimesToHit: Swift::Int = 1, offsetHealthBar: CoreFoundation::CGPoint = .zero)
+  @_Concurrency::MainActor @preconcurrency public init(color: Scroller2d::AliasColor, size: CoreFoundation::CGSize, position: CoreFoundation::CGPoint, name: Swift::String, anchorPoint: CoreFoundation::CGPoint, zPosition: CoreFoundation::CGFloat, gameScene: Scroller2d::AppSharedSceneBase, allowedTimesToHit: Swift::Int = 1, offsetHealthBar: CoreFoundation::CGPoint = .zero)
+  @_Concurrency::MainActor @preconcurrency public func update(targetPosition: CoreFoundation::CGPoint)
+  @_Concurrency::MainActor @preconcurrency public func animate()
+  @_Concurrency::MainActor @preconcurrency public func animateOnce()
+  @_Concurrency::MainActor @preconcurrency public func animateForever()
+  @_Concurrency::MainActor @preconcurrency public func executeCycleEnd()
+  @_Concurrency::MainActor @preconcurrency public func resetAnimationOnce()
+  @_Concurrency::MainActor @preconcurrency public func removeAnimation()
+  @_Concurrency::MainActor @preconcurrency public func addConstantAudio(effect: [Scroller2d::GameSound]?)
+  @_Concurrency::MainActor @preconcurrency public func soundEffectRun(effect: [Scroller2d::GameSound]?)
+  @_Concurrency::MainActor @preconcurrency public func allowedTimesHitExceeded() -> Swift::Bool
+  @objc deinit
+}
+@objc @_Concurrency::MainActor @preconcurrency open class SKSpriteNodeEnemy2dBase : Scroller2d::SKSpriteNodeSharedBase {
+  @_Concurrency::MainActor @preconcurrency public var animateDeath: Swift::Bool
+  @_Concurrency::MainActor @preconcurrency public var completeVariable: Swift::Bool
+  @_Concurrency::MainActor @preconcurrency public var executeState: Scroller2d::enemyStateType
+  @_Concurrency::MainActor @preconcurrency public var imageBase: Swift::String
+  @_Concurrency::MainActor @preconcurrency public var timeHit: Swift::Int
+  @_Concurrency::MainActor @preconcurrency public var target: SpriteKit::SKSpriteNode?
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation::NSCoder)
+  @_Concurrency::MainActor @preconcurrency public init(imageName: Swift::String, name: Swift::String, position: CoreFoundation::CGPoint, size: CoreFoundation::CGSize = CGSize.zero, anchorPoint: CoreFoundation::CGPoint, zPosition: CoreFoundation::CGFloat, gameScene: Scroller2d::AppSharedSceneBase, allowedTimesToHit: Swift::Int = 1, offsetHealthBar: CoreFoundation::CGPoint = .zero, useGravity: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency public init(texture: SpriteKit::SKTexture, name: Swift::String, position: CoreFoundation::CGPoint, size: CoreFoundation::CGSize = CGSize.zero, anchorPoint: CoreFoundation::CGPoint, zPosition: CoreFoundation::CGFloat, gameScene: Scroller2d::AppSharedSceneBase, allowedTimesToHit: Swift::Int = 1, offsetHealthBar: CoreFoundation::CGPoint = .zero, useGravity: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency public init(imageName: Swift::String, name: Swift::String, size: CoreFoundation::CGSize = CGSize.zero, anchorPoint: CoreFoundation::CGPoint, zPosition: CoreFoundation::CGFloat, gameScene: Scroller2d::AppSharedSceneBase, allowedTimesToHit: Swift::Int = 1, offsetHealthBar: CoreFoundation::CGPoint = .zero, useGravity: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency public init(color: Scroller2d::AliasColor, size: CoreFoundation::CGSize, position: CoreFoundation::CGPoint, name: Swift::String, anchorPoint: CoreFoundation::CGPoint, zPosition: CoreFoundation::CGFloat, gameScene: Scroller2d::AppSharedSceneBase, allowedTimesToHit: Swift::Int = 1, offsetHealthBar: CoreFoundation::CGPoint = .zero, useGravity: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency public func update()
+  @_Concurrency::MainActor @preconcurrency public func sendProjectile()
+  @_Concurrency::MainActor @preconcurrency public func soundEffectAction(effect: Scroller2d::GameSound?) -> SpriteKit::SKAction
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency::MainActor @preconcurrency open class SKSpriteNodeSharedBase : SpriteKit::SKSpriteNode {
+  @_Concurrency::MainActor @preconcurrency public var objectClassType: [Scroller2d::objectClassType]
+  @_Concurrency::MainActor @preconcurrency public var soundEffects: [Scroller2d::GameSound]
+  @_Concurrency::MainActor @preconcurrency public var direction: Scroller2d::pathDirection
+  @_Concurrency::MainActor @preconcurrency public var damageDirection: Scroller2d::pathDirection
+  @_Concurrency::MainActor @preconcurrency public var gameScene: Scroller2d::AppSharedSceneBase
+  @_Concurrency::MainActor @preconcurrency public var characterProperties: Scroller2d::Character?
+  @_Concurrency::MainActor @preconcurrency public var obstacleProperties: Scroller2d::Obstacle?
+  @_Concurrency::MainActor @preconcurrency public var projectile: Scroller2d::ProjectileProperties?
+  @_Concurrency::MainActor @preconcurrency public var randomizePosition: CoreFoundation::CGPoint?
+  @_Concurrency::MainActor @preconcurrency public var collisionMasks: Scroller2d::CollisionDetection?
+  @_Concurrency::MainActor @preconcurrency public var extraProperties: [Scroller2d::ExtraProperties]?
+  @_Concurrency::MainActor @preconcurrency public var cycleEndProperties: [Scroller2d::CycleEndProperties]?
+  @_Concurrency::MainActor @preconcurrency public var animationCompleted: Swift::Bool
+  @_Concurrency::MainActor @preconcurrency public var allowedTimesToHit: Swift::Int
+  @_Concurrency::MainActor @preconcurrency public var hidesBehindObject: Swift::String
+  @_Concurrency::MainActor @preconcurrency public var hitsRemaining: Swift::Int
+  @_Concurrency::MainActor @preconcurrency public var objectActsOn: Swift::String
+  @_Concurrency::MainActor @preconcurrency public var callbackFunction: Swift::String
+  @_Concurrency::MainActor @preconcurrency public var offsetHealthBar: CoreFoundation::CGPoint
+  @_Concurrency::MainActor @preconcurrency public var rotation: CoreFoundation::CGFloat
+  @_Concurrency::MainActor @preconcurrency public var startingPosition: CoreFoundation::CGPoint
+  @_Concurrency::MainActor @preconcurrency open func addPhysics(texture: SpriteKit::SKTexture, size: CoreFoundation::CGSize, categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32? = 0, contactBitMask: Swift::UInt32? = 0, isDynamic: Swift::Bool = true, useGravity: Swift::Bool = true, allowsRotation: Swift::Bool = false, usePrecision: Swift::Bool = false, isPinned: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency open func addPhysics(imageName: Swift::String, categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32? = 0, contactBitMask: Swift::UInt32? = 0, isDynamic: Swift::Bool = true, useGravity: Swift::Bool = true, allowsRotation: Swift::Bool = false, usePrecision: Swift::Bool = false, isPinned: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency open func addPhysics(size: CoreFoundation::CGSize, categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32? = 0, contactBitMask: Swift::UInt32? = 0, isDynamic: Swift::Bool = true, useGravity: Swift::Bool = true, allowsRotation: Swift::Bool = false, usePrecision: Swift::Bool = false, isPinned: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency open func addPhysics(edgeFrom: CoreFoundation::CGPoint, edgeTo: CoreFoundation::CGPoint, categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32? = 0, contactBitMask: Swift::UInt32? = 0, isDynamic: Swift::Bool = true, useGravity: Swift::Bool = true, allowsRotation: Swift::Bool = false, usePrecision: Swift::Bool = false, isPinned: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency open func addPhysics(edges: [SpriteKit::SKPhysicsBody], categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32? = 0, contactBitMask: Swift::UInt32? = 0, isDynamic: Swift::Bool = true, useGravity: Swift::Bool = true, allowsRotation: Swift::Bool = false, usePrecision: Swift::Bool = false, isPinned: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency open func addPhysics(bodies: [SpriteKit::SKPhysicsBody], categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32? = 0, contactBitMask: Swift::UInt32? = 0, isDynamic: Swift::Bool = true, useGravity: Swift::Bool = true, allowsRotation: Swift::Bool = false, usePrecision: Swift::Bool = false, isPinned: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency open func addPhysics(polygons: [Scroller2d::PolyPhysics], categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32? = 0, contactBitMask: Swift::UInt32? = 0, isDynamic: Swift::Bool = true, useGravity: Swift::Bool = true, allowsRotation: Swift::Bool = false, usePrecision: Swift::Bool = false, isPinned: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency open func addPhysics(radius: CoreFoundation::CGFloat, center: CoreFoundation::CGPoint = CGPoint.zero, categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32? = 0, contactBitMask: Swift::UInt32? = 0, isDynamic: Swift::Bool = true, useGravity: Swift::Bool = true, allowsRotation: Swift::Bool = false, usePrecision: Swift::Bool = false, isPinned: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency open func addPhysics(rectangle: CoreFoundation::CGSize, center: CoreFoundation::CGPoint = CGPoint.zero, categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32? = 0, contactBitMask: Swift::UInt32? = 0, isDynamic: Swift::Bool = true, useGravity: Swift::Bool = true, allowsRotation: Swift::Bool = false, usePrecision: Swift::Bool = false, isPinned: Swift::Bool = false)
+  @_Concurrency::MainActor @preconcurrency open func buildPhysicsProperties(categoryBitMask: Swift::UInt32, collisionBitMask: Swift::UInt32?, contactBitMask: Swift::UInt32?, isDynamic: Swift::Bool, useGravity: Swift::Bool, allowsRotation: Swift::Bool, usePrecision: Swift::Bool, isPinned: Swift::Bool)
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public init(texture: SpriteKit::SKTexture?, color: UIKit::UIColor, size: CoreFoundation::CGSize)
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation::NSCoder)
+  @objc deinit
+}
+@_Concurrency::MainActor public func loadAnyConfig(resource: Foundation::URL, configType: Scroller2d::configType) -> Any
+@_Concurrency::MainActor public func loadAnyConfig(resource: Swift::String, extensionType: Swift::String? = "plist", configType: Scroller2d::configType) -> Any
+public func loadAnyConfig(resource: Swift::String, extensionType: Swift::String? = "plist", path: Swift::String, configType: Scroller2d::configType) -> Any
+public typealias AliasColor = UIKit::UIColor
+public typealias AliasImage = UIKit::UIImage
+public typealias AliasFont = UIKit::UIFont
+extension Swift::CaseIterable {
+  public static func from(string: Swift::String) -> Self?
+  public func toString() -> Swift::String
+}
+extension Swift::Array {
+  @_Concurrency::MainActor public func deviceValue(key: Scroller2d::fieldList) -> Any?
+  @_Concurrency::MainActor public func deviceValue(key: Scroller2d::fieldList, scene: SpriteKit::SKScene, convertTo: SpriteKit::SKNode) -> Any?
+  public func collisionBitwiseOr() -> Swift::UInt32
+  public func keywordContains(_ search: Swift::String) -> Swift::Bool
+}
+extension CoreFoundation::CGFloat {
+  public func string(format: Swift::String = "%.2f") -> Swift::String
+  public func rounded(toPlaces places: Swift::Int) -> CoreFoundation::CGFloat
+}
+extension Swift::Double {
+  public func string(format: Swift::String = "%.2f") -> Swift::String
+  public func rounded(toPlaces places: Swift::Int) -> Swift::Double
+}
+extension CoreFoundation::CGPoint {
+  public func distanceBetweenPoints(point: CoreFoundation::CGPoint) -> CoreFoundation::CGPoint
+  public func toString() -> Swift::String
+}
+extension CoreFoundation::CGSize {
+  public func toString() -> Swift::String
+}
+extension CoreFoundation::CGVector {
+  public func toString() -> Swift::String
+}
+extension Swift::FloatingPoint {
+  public var degreesToRadians: Self {
+    get
+  }
+  public var radiansToDegrees: Self {
+    get
+  }
+}
+extension Swift::Int {
+  public var degreesToRadians: Swift::Double {
+    get
+  }
+  public var radiansToDegrees: Swift::Double {
+    get
+  }
+  public var boolValue: Swift::Bool {
+    get
+  }
+  public func timeString() -> Swift::String
+}
+extension Swift::Bool {
+  public var intValue: Swift::Int {
+    get
+  }
+}
+public protocol Reflectable {
+  func properties(limit: Swift::Int) -> [Swift::String : Any]
+}
+extension Scroller2d::Reflectable {
+  public func properties(limit: Swift::Int = Int.max) -> [Swift::String : Any]
+}
+extension SpriteKit::SKAction {
+  @_Concurrency::MainActor public class func blink(times: Swift::Int, duration: Foundation::TimeInterval = 2.0, colorize: Swift::Bool = false, color1: SpriteKit::SKColor = SKColor.red, color2: SpriteKit::SKColor = SKColor.white, alphaMax: CoreFoundation::CGFloat = 1.0) -> SpriteKit::SKAction
+  @_Concurrency::MainActor public class func pendulum(withAngle angle: CoreFoundation::CGFloat, period: Foundation::TimeInterval, key: Swift::String) -> SpriteKit::SKAction
+  @_Concurrency::MainActor public class func pendulum(withAngle angle: CoreFoundation::CGFloat, duration: Foundation::TimeInterval, key: Swift::String) -> SpriteKit::SKAction
+  @_Concurrency::MainActor public class func animateExplosion(atlasName: Swift::String, size: CoreFoundation::CGSize, position: CoreFoundation::CGPoint, collision: Scroller2d::CollisionDetection, animationDuration: CoreFoundation::CGFloat, zPosition: CoreFoundation::CGFloat, fadeExplodedObject: Swift::Bool, repeatable: Swift::Bool, node: SpriteKit::SKNode, skScene: Scroller2d::AppSharedSceneBase) -> SpriteKit::SKAction
+  @_Concurrency::MainActor public class func manualAnimate(atlasName: Swift::String, skScene: Scroller2d::AppSharedSceneBase, frameRange: Swift::Range<Swift::Int>?, idlePerFrameWait: CoreFoundation::CGFloat = 0.05, cycleEndDelay: CoreFoundation::CGFloat = 0, frequency: Scroller2d::animationFrequency = .foreverAutomatically, horizontalFlip: Swift::Bool = false) -> SpriteKit::SKAction
+  @_Concurrency::MainActor public class func manualAnimate(frames: [SpriteKit::SKTexture], skScene: Scroller2d::AppSharedSceneBase, frameRange: Swift::Range<Swift::Int>?, idlePerFrameWait: CoreFoundation::CGFloat = 0.05, cycleEndDelay: CoreFoundation::CGFloat = 0, frequency: Scroller2d::animationFrequency = .foreverAutomatically, horizontalFlip: Swift::Bool = false) -> SpriteKit::SKAction
+}
+extension SpriteKit::SKSceneScaleMode : @retroactive Swift::CaseIterable {
+  public static var allCases: [SpriteKit::SKSceneScaleMode] {
+    get
+  }
+  @available(iOS 7.0, *)
+  public typealias AllCases = [SpriteKit::SKSceneScaleMode]
+}
+extension SpriteKit::SKSceneScaleMode : @retroactive Swift::ExpressibleByExtendedGraphemeClusterLiteral {
+  @available(iOS 7.0, *)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift::String
+}
+extension SpriteKit::SKSceneScaleMode : @retroactive Swift::ExpressibleByUnicodeScalarLiteral {
+  @available(iOS 7.0, *)
+  public typealias UnicodeScalarLiteralType = Swift::String
+}
+extension SpriteKit::SKSceneScaleMode : @retroactive Swift::ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift::String)
+  @available(iOS 7.0, *)
+  public typealias StringLiteralType = Swift::String
+}
+extension SpriteKit::SKSceneScaleMode : @retroactive Swift::CustomStringConvertible {
+  public var description: Swift::String {
+    get
+  }
+}
+extension SpriteKit::SKTexture {
+  public var imageName: Swift::String? {
+    get
+  }
+}
+extension Swift::String {
+  public enum typeList : Swift::String, Swift::CaseIterable {
+    case deviceNameType
+    case groundPhysicsAngleType
+    case objectClassType
+    case collisionType
+    case actionType
+    public init?(rawValue: Swift::String)
+    public typealias AllCases = [Swift::String.Scroller2d::typeList]
+    public typealias RawValue = Swift::String
+    nonisolated public static var allCases: [Swift::String.Scroller2d::typeList] {
+      get
+    }
+    public var rawValue: Swift::String {
+      get
+    }
+  }
+  public func typeToList(type: Swift::String.Scroller2d::typeList) -> [Any]
+  public func toList() -> [Swift::String]
+  public func collisionBitwiseOr() -> Swift::UInt32
+  public func collisionBitwiseAnd() -> Swift::UInt32
+  public func toFloat(_ places: Swift::Int) -> CoreFoundation::CGFloat
+  public func toCGSize() -> CoreFoundation::CGSize
+  public func toCGPosition(_ round: Swift::Int = 1) -> CoreFoundation::CGPoint
+  public func toCGPoint() -> CoreFoundation::CGPoint
+  public func toCGVector() -> CoreFoundation::CGVector
+  public func toCGFloatRange() -> Swift::ClosedRange<CoreFoundation::CGFloat>
+  public func toIntRange() -> Swift::ClosedRange<Swift::Int>
+  public func toRandomCGPoint(_ round: Swift::Int = 1) -> CoreFoundation::CGPoint
+  public func ensureSeparator() -> Swift::String
+  public func intValue() -> Swift::Int?
+}
+extension UIKit::UIColor {
+  convenience public init?(hex: Swift::String)
+}
+@_Concurrency::MainActor public var runningDevice: Scroller2d::deviceName
+@_Concurrency::MainActor public var defaultDevice: Scroller2d::deviceName
+@_Concurrency::MainActor public var defaultSceneSize: CoreFoundation::CGSize
+@_Concurrency::MainActor public var levelEndPoint: CoreFoundation::CGPoint
+@_hasMissingDesignatedInitializers public class LibraryVersion {
+  public static func getVersion() -> Swift::String
+  public static func getSchemaVersion() -> Swift::String
+  @objc deinit
+}
+public protocol EnumListProvider {
+  static var typeName: Swift::String { get }
+  static func allStrings() -> [Swift::String]
+}
+public struct EnumCatalog {
+  public static var all: [Swift::String : () -> [Swift::String]] {
+    get
+  }
+}
+public enum siblingType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case child
+  case none
+  case parent
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::siblingType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::siblingType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum characterType : Swift::String, Swift::CaseIterable, Swift::Codable, AppIntents::AppEnum, Scroller2d::EnumListProvider {
+  case animal
+  case backgroundAnimal
+  case human
+  case humanProjectile
+  case mystic
+  case mysticProjectile
+  case soldier
+  case warrior
+  case robot
+  public static var typeDisplayRepresentation: AppIntents::TypeDisplayRepresentation {
+    get
+  }
+  public static let caseDisplayRepresentations: [Scroller2d::characterType : AppIntents::DisplayRepresentation]
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::characterType]
+  public typealias RawValue = Swift::String
+  public typealias Specification = @_opaqueReturnTypeOf("$s10AppIntents0A4EnumPAAE28defaultResolverSpecificationQrvpZ", 0) __<Scroller2d::characterType>
+  public typealias UnwrappedType = Scroller2d::characterType
+  public typealias ValueType = Scroller2d::characterType
+  nonisolated public static var allCases: [Scroller2d::characterType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum clubAttachment : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case spikeBlock
+  case spikeWithRocks
+  case spikeCircle
+  case spikelessRocks
+  case rockWeight
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::clubAttachment]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::clubAttachment] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum configType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case app
+  case characters
+  case level
+  case license
+  case objects
+  case obstacles
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::configType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::configType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum deviceName : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case none
+  case defaultDevice
+  case iPhone15
+  case iPhone15Pro
+  case iPhone15ProMax
+  case iPhone15Plus
+  case iPhone16
+  case iPhone16e
+  case iPhone16Pro
+  case iPhone16ProMax
+  case iPhone16Plus
+  case iPhone17
+  case iPhone17Pro
+  case iPhone17ProMax
+  case iPhone18
+  case iPhone18Plus
+  case iPhone18Pro
+  case iPhone18ProMax
+  case iPhoneDuo
+  case iPhoneAir
+  case iPhoneSE3rdGen
+  case iPad
+  public func deviceSize() -> CoreFoundation::CGSize
+  public func friendlyName() -> Swift::String
+  public func toList(values: Swift::String) -> [Scroller2d::deviceName]
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::deviceName]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::deviceName] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum sceneOrientationType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case portrait
+  case landscape
+  public func friendlyName() -> Swift::String
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::sceneOrientationType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::sceneOrientationType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum enemyStateType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case Attack
+  case Die
+  case Idle
+  case Initial
+  case Jump
+  case Move
+  case None
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::enemyStateType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::enemyStateType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum executeStateType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case Climb
+  case Die
+  case GroundSlam
+  case Idle
+  case IdleBlinking
+  case IdleClimb
+  case IdleSlashing
+  case IdleThrow
+  case Initial
+  case Jump
+  case Move
+  case RunSlashing
+  case RunThrow
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::executeStateType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::executeStateType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum fieldList : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case altPosition
+  case digitSize
+  case distance
+  case offsetEdge
+  case fontSize
+  case offsetHealthBar
+  case offset
+  case position
+  case randomPositionRange
+  case selectorSize
+  case size
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::fieldList]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::fieldList] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum groundBaseType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case BrightWater
+  case Ground
+  case Lava
+  case MuddyWater
+  case None
+  case Spike
+  case ToxicGreen
+  case Water
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::groundBaseType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::groundBaseType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum groundPhysicsAngleType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case additionalFloorTile
+  case angle
+  case angleEndRight
+  case angleStartLeft
+  case edgeStraightDownLeft
+  case edgeStraightDownRight
+  case mirage
+  case none
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::groundPhysicsAngleType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::groundPhysicsAngleType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum imageScaling : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case none
+  case x1
+  case x2
+  case x3
+  public func stringValue() -> Swift::String
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::imageScaling]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::imageScaling] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum imageType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case gif
+  case jpg
+  case jpeg
+  case png
+  case svg
+  case none
+  public func stringValue() -> Swift::String
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::imageType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::imageType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum objectClassType : Swift::String, Swift::CaseIterable, Swift::Codable, AppIntents::AppEnum, Scroller2d::EnumListProvider {
+  case alternateScene
+  case alternateSceneLock
+  case artifact1
+  case artifact2
+  case artifact3
+  case barrel
+  case barrelDamaged
+  case barrier
+  case blackBouncibleFlyingBomb
+  case bladePost
+  case bombExplosion
+  case boulderDrop
+  case boulderDropStop
+  case bouncingCactus
+  case bouncingMushroom
+  case bouncingMushroomBrown
+  case bridge
+  case bucketDrop
+  case cartWithWheels
+  case caveCart
+  case checkpoint
+  case coin
+  case conveyor
+  case conveyorPlatform
+  case crateDamaged
+  case darknessEnd
+  case darknessLighted
+  case darknessStart
+  case dropBlock
+  case dropRotatingObject
+  case enemyArrow
+  case enemyFireball
+  case enemyOneSlash
+  case fallingBomb
+  case fallingChandelier
+  case fallingDrip
+  case fallingStoneTrap
+  case floatingAttackWeapon
+  case floatingBomb
+  case floatIslandDisappear
+  case floorAboveGround
+  case floorSubstitute
+  case healthBanana
+  case heroArrow
+  case heroFireball
+  case hideOnTouch
+  case hollowTree
+  case keepAwayKing
+  case killingBladePost
+  case killingContraption
+  case lever
+  case mirage
+  case mirageLightBeam
+  case movingPlatform
+  case none
+  case parachuteBomb
+  case pendulumSwing
+  case puzzlePiece1
+  case puzzlePiece2
+  case puzzlePiece3
+  case redBouncibleFlyingBomb
+  case rope
+  case rotatingBlade
+  case ropePlatform
+  case shield
+  case shieldTimed
+  case shopEncountered
+  case shopEntered
+  case springboardMushroom
+  case springboardMushroomRed
+  case stoneSpike
+  case swingingBlade
+  case tntBarrel
+  case tornado
+  case trapDoor
+  case tutorialGroundSlam
+  case tutorialJump
+  case tutorialRopeJump
+  case tutorialSlash
+  case tutorialTouched
+  case winchOscillate
+  public static var typeDisplayRepresentation: AppIntents::TypeDisplayRepresentation {
+    get
+  }
+  public static let caseDisplayRepresentations: [Scroller2d::objectClassType : AppIntents::DisplayRepresentation]
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::objectClassType]
+  public typealias RawValue = Swift::String
+  public typealias Specification = @_opaqueReturnTypeOf("$s10AppIntents0A4EnumPAAE28defaultResolverSpecificationQrvpZ", 0) __<Scroller2d::objectClassType>
+  public typealias UnwrappedType = Scroller2d::objectClassType
+  public typealias ValueType = Scroller2d::objectClassType
+  nonisolated public static var allCases: [Scroller2d::objectClassType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum pathDirection : Swift::String, Swift::CaseIterable, Swift::Codable, AppIntents::AppEnum, Scroller2d::EnumListProvider {
+  case all
+  case both
+  case bothStartLeft
+  case bothStartRight
+  case bottom
+  case down
+  case downLeft
+  case downRight
+  case downSwipe
+  case jump
+  case left
+  case none
+  case reset
+  case right
+  case top
+  case up
+  case upDown
+  case upLeft
+  case upRight
+  case upSwipe
+  public static var typeDisplayRepresentation: AppIntents::TypeDisplayRepresentation {
+    get
+  }
+  public static let caseDisplayRepresentations: [Scroller2d::pathDirection : AppIntents::DisplayRepresentation]
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::pathDirection]
+  public typealias RawValue = Swift::String
+  public typealias Specification = @_opaqueReturnTypeOf("$s10AppIntents0A4EnumPAAE28defaultResolverSpecificationQrvpZ", 0) __<Scroller2d::pathDirection>
+  public typealias UnwrappedType = Scroller2d::pathDirection
+  public typealias ValueType = Scroller2d::pathDirection
+  nonisolated public static var allCases: [Scroller2d::pathDirection] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum animationMoveDirection : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case all
+  case bothWithHorizontalFlip
+  case custom
+  case down
+  case downLeft
+  case downRight
+  case gravityDrop
+  case gravityDropWithCollision
+  case left
+  case leftRight
+  case none
+  case right
+  case up
+  case upDown
+  case upLeft
+  case upRight
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::animationMoveDirection]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::animationMoveDirection] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum projectileType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case arrow
+  case bullet
+  case fireBall
+  case laser
+  case light
+  case none
+  case ray
+  case spell
+  case water
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::projectileType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::projectileType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum rotationType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case clockwise
+  case counterClockwise
+  case pendulum
+  case none
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::rotationType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::rotationType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum scrollOrientationType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case both
+  case horizontal
+  case vertical
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::scrollOrientationType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::scrollOrientationType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum soundType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case constant
+  case attack
+  case die
+  case touch
+  case background
+  case onDemand
+  case other
+  case turnPage
+  case menuButtonTouched
+  case optionSliderValueChanged
+  case none
+  public func stringValue() -> Swift::String
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::soundType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::soundType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum soundExtension : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case aac
+  case ac3
+  case adts
+  case aiff
+  case au
+  case avi
+  case caf
+  case mp3
+  case mp4
+  case m4a
+  case sd2
+  case snd
+  case wav
+  case none
+  public func stringValue() -> Swift::String
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::soundExtension]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::soundExtension] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum actionType : Swift::String, Swift::CaseIterable, Swift::Codable, Swift::Hashable, Scroller2d::EnumListProvider {
+  case all
+  case attack
+  case death
+  case idle
+  case initial
+  case move
+  case none
+  case toss
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::actionType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::actionType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum characterClassType : Swift::String, Swift::CaseIterable, Swift::Codable, AppIntents::AppEnum, Scroller2d::EnumListProvider {
+  case alien
+  case enemy
+  case friendly
+  case ghost
+  case none
+  public func stringValue() -> Swift::String
+  public static var typeDisplayRepresentation: AppIntents::TypeDisplayRepresentation {
+    get
+  }
+  public static let caseDisplayRepresentations: [Scroller2d::characterClassType : AppIntents::DisplayRepresentation]
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::characterClassType]
+  public typealias RawValue = Swift::String
+  public typealias Specification = @_opaqueReturnTypeOf("$s10AppIntents0A4EnumPAAE28defaultResolverSpecificationQrvpZ", 0) __<Scroller2d::characterClassType>
+  public typealias UnwrappedType = Scroller2d::characterClassType
+  public typealias ValueType = Scroller2d::characterClassType
+  nonisolated public static var allCases: [Scroller2d::characterClassType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum collisionTypes : Swift::UInt32, Swift::CaseIterable, Swift::Codable, AppIntents::AppEnum, Scroller2d::EnumListProvider {
+  case humanPlayer
+  case staticObjectBody
+  case staticObjectTouched
+  case staticObjectMovable
+  case staticObjectBouncible
+  case floor
+  case none
+  case objectCausesDamageAllSides
+  case objectCausesDeath
+  case collectibleTouched
+  case enemyTouch
+  case projectileThrown
+  case surroundingsContact
+  case objectRope
+  case staticObjectSpecialHandling
+  case floatingFloor
+  case objectToObject
+  case floorAboveGround
+  case objectCausesDamageAllSidesIgnoreCollision
+  public static var typeDisplayRepresentation: AppIntents::TypeDisplayRepresentation {
+    get
+  }
+  public static let caseDisplayRepresentations: [Scroller2d::collisionTypes : AppIntents::DisplayRepresentation]
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::UInt32)
+  public typealias AllCases = [Scroller2d::collisionTypes]
+  public typealias RawValue = Swift::UInt32
+  public typealias Specification = @_opaqueReturnTypeOf("$s10AppIntents0A4EnumPAAE28defaultResolverSpecificationQrvpZ", 0) __<Scroller2d::collisionTypes>
+  public typealias UnwrappedType = Scroller2d::collisionTypes
+  public typealias ValueType = Scroller2d::collisionTypes
+  nonisolated public static var allCases: [Scroller2d::collisionTypes] {
+    get
+  }
+  public var rawValue: Swift::UInt32 {
+    get
+  }
+}
+public enum animationFrequency : Swift::String, Swift::CaseIterable, Swift::Codable, AppIntents::AppEnum, Scroller2d::EnumListProvider {
+  case custom
+  case foreverAutomatically
+  case foreverResetManual
+  case never
+  case none
+  case once
+  public static var typeDisplayRepresentation: AppIntents::TypeDisplayRepresentation {
+    get
+  }
+  public static let caseDisplayRepresentations: [Scroller2d::animationFrequency : AppIntents::DisplayRepresentation]
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::animationFrequency]
+  public typealias RawValue = Swift::String
+  public typealias Specification = @_opaqueReturnTypeOf("$s10AppIntents0A4EnumPAAE28defaultResolverSpecificationQrvpZ", 0) __<Scroller2d::animationFrequency>
+  public typealias UnwrappedType = Scroller2d::animationFrequency
+  public typealias ValueType = Scroller2d::animationFrequency
+  nonisolated public static var allCases: [Scroller2d::animationFrequency] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum windowItemType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case artifact
+  case artifactCount
+  case coin
+  case coinCount
+  case description
+  case map
+  case other
+  case replay
+  case time
+  case timeCount
+  case title
+  case window
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::windowItemType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::windowItemType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum sceneObjectType : Swift::String, Swift::CaseIterable, Swift::Codable, AppIntents::AppEnum, Scroller2d::EnumListProvider {
+  case obstacles
+  case character
+  case checkpoint
+  case coin
+  case shield
+  case artifact
+  case ground
+  case background
+  case levelEnd
+  case phaseEnd
+  case none
+  public func toString() -> Swift::String
+  public func toFolderString() -> Swift::String
+  public func title() -> Swift::String
+  public var tabItem: Swift::String {
+    get
+  }
+  public var sfSymbol: Swift::String {
+    get
+  }
+  public static var typeDisplayRepresentation: AppIntents::TypeDisplayRepresentation {
+    get
+  }
+  public static let caseDisplayRepresentations: [Scroller2d::sceneObjectType : AppIntents::DisplayRepresentation]
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::sceneObjectType]
+  public typealias RawValue = Swift::String
+  public typealias Specification = @_opaqueReturnTypeOf("$s10AppIntents0A4EnumPAAE28defaultResolverSpecificationQrvpZ", 0) __<Scroller2d::sceneObjectType>
+  public typealias UnwrappedType = Scroller2d::sceneObjectType
+  public typealias ValueType = Scroller2d::sceneObjectType
+  nonisolated public static var allCases: [Scroller2d::sceneObjectType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum callbackType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
+  case contact
+  case cycleEnd
+  case update
+  public static var typeName: Swift::String {
+    get
+  }
+  public static func allStrings() -> [Swift::String]
+  public init?(rawValue: Swift::String)
+  public typealias AllCases = [Scroller2d::callbackType]
+  public typealias RawValue = Swift::String
+  nonisolated public static var allCases: [Scroller2d::callbackType] {
+    get
+  }
+  public var rawValue: Swift::String {
+    get
+  }
+}
+@_Concurrency::MainActor final public class CameraFollowHelper {
+  @_Concurrency::MainActor weak final public var camera: SpriteKit::SKCameraNode?
+  @_Concurrency::MainActor weak final public var target: SpriteKit::SKNode?
+  @_Concurrency::MainActor final public var bounds: CoreFoundation::CGRect?
+  @_Concurrency::MainActor final public var viewportSize: CoreFoundation::CGSize
+  @_Concurrency::MainActor final public var lookAhead: CoreFoundation::CGVector
+  @_Concurrency::MainActor final public var followsHorizontal: Swift::Bool
+  @_Concurrency::MainActor final public var followsVertical: Swift::Bool
+  @_Concurrency::MainActor final public var smoothing: CoreFoundation::CGFloat
+  @_Concurrency::MainActor public init(camera: SpriteKit::SKCameraNode, target: SpriteKit::SKNode, viewportSize: CoreFoundation::CGSize, bounds: CoreFoundation::CGRect? = nil)
+  @_Concurrency::MainActor final public func update(deltaTime: Foundation::TimeInterval)
+  @objc deinit
+}
+public enum LevelAssemblyError : Swift::Error, Foundation::LocalizedError {
+  case invalid(Swift::String)
+  case unsupported(Swift::String)
+  case missingDefinition(Swift::String)
+  public var errorDescription: Swift::String? {
+    get
+  }
+}
+@_Concurrency::MainActor public enum GroundConstructionHelper {
+  @_Concurrency::MainActor public struct Result {
+    @_Concurrency::MainActor public let root: SpriteKit::SKNode
+    @_Concurrency::MainActor public let surfaces: [CoreFoundation::CGRect]
+    @_Concurrency::MainActor public let bounds: CoreFoundation::CGRect
+    @_Concurrency::MainActor public let endPoint: CoreFoundation::CGPoint
+    @_Concurrency::MainActor public func installGroundLookup(in scene: Scroller2d::AppSharedSceneBase)
+  }
+  @_Concurrency::MainActor public static func build(sections: [Scroller2d::GroundSection], origin: CoreFoundation::CGPoint, texture: (Swift::String) throws -> SpriteKit::SKTexture, categoryBitMask: Swift::UInt32 = 1, collisionBitMask: Swift::UInt32 = UInt32.max, contactTestBitMask: Swift::UInt32 = 0, collisionTopInset: CoreFoundation::CGFloat = 0) throws -> Scroller2d::GroundConstructionHelper.Scroller2d::Result
+}
+@_Concurrency::MainActor public enum LevelAssemblyHelper {
+  @_Concurrency::MainActor public struct Resources {
+    @_Concurrency::MainActor public let level: Scroller2d::Level
+    @_Concurrency::MainActor public let obstacles: [Scroller2d::Obstacle]
+    @_Concurrency::MainActor public let characters: [Scroller2d::Character]
+    @_Concurrency::MainActor public let objects: [Scroller2d::GenericObject]
+    @_Concurrency::MainActor public init(level: Scroller2d::Level, obstacles: [Scroller2d::Obstacle] = [], characters: [Scroller2d::Character] = [], objects: [Scroller2d::GenericObject] = [])
+    @_Concurrency::MainActor public init(levelURL: Foundation::URL, levelIndex: Swift::Int = 0, obstacleURL: Foundation::URL? = nil, characterURL: Foundation::URL? = nil, objectURL: Foundation::URL? = nil) throws
+    @_Concurrency::MainActor public func obstacle(for entry: Scroller2d::ObstacleLevelItem) throws -> Scroller2d::Obstacle
+    @_Concurrency::MainActor public func character(for entry: Scroller2d::CharacterLevelItem) throws -> Scroller2d::Character
+  }
+  @_Concurrency::MainActor public struct Result {
+    @_Concurrency::MainActor public let root: SpriteKit::SKNode
+    @_Concurrency::MainActor public let sceneSize: CoreFoundation::CGSize
+    @_Concurrency::MainActor public let anchorPoint: CoreFoundation::CGPoint
+    @_Concurrency::MainActor public let scaleMode: SpriteKit::SKSceneScaleMode
+    @_Concurrency::MainActor public let ground: Scroller2d::GroundConstructionHelper.Scroller2d::Result
+    @_Concurrency::MainActor public let obstacles: [Scroller2d::SKSpriteNode2dBase]
+    @_Concurrency::MainActor public let characters: [Scroller2d::SKSpriteNodeEnemy2dBase]
+    @_Concurrency::MainActor public func install(in scene: Scroller2d::AppSharedSceneBase)
+  }
+  @_Concurrency::MainActor public static func build(resources: Scroller2d::LevelAssemblyHelper.Scroller2d::Resources, scene: Scroller2d::AppSharedSceneBase, groundTexture: (Swift::String) throws -> SpriteKit::SKTexture, groundCategoryBitMask: Swift::UInt32 = 1, groundCollisionBitMask: Swift::UInt32 = UInt32.max, groundCollisionTopInset: CoreFoundation::CGFloat = 0, target: SpriteKit::SKSpriteNode? = nil, configureObstacle: (inout Scroller2d::Obstacle) throws -> Swift::Void = { _ in }, createCharacter: ((Scroller2d::CharacterLevelItem, Scroller2d::Character, SpriteKit::SKNode, Scroller2d::AppSharedSceneBase) throws -> Scroller2d::SKSpriteNodeEnemy2dBase?)? = nil, addContent: (Scroller2d::LevelAssemblyHelper.Scroller2d::Resources, SpriteKit::SKNode, Scroller2d::GroundConstructionHelper.Scroller2d::Result) throws -> Swift::Void = { _, _, _ in }) throws -> Scroller2d::LevelAssemblyHelper.Scroller2d::Result
+}
+@_Concurrency::MainActor public func CreateObstacleHelper(ld: Scroller2d::Obstacle, node: SpriteKit::SKNode, scene: Scroller2d::AppSharedSceneBase) -> Scroller2d::SKSpriteNode2dBase
+@_Concurrency::MainActor public func CreateCharacterHelper(levelItem: Scroller2d::CharacterLevelItem, element: Scroller2d::Character, target: SpriteKit::SKSpriteNode?, node: SpriteKit::SKNode, scene: Scroller2d::AppSharedSceneBase) -> Scroller2d::SKSpriteNodeEnemy2dBase
+public struct BaseConfig : Swift::Codable {
+  public var darkMode: Swift::Bool
+  public var defaultImageType: Scroller2d::imageType
+  public var defaultSoundExtension: Scroller2d::soundExtension
+  public var defaultImageScale: Scroller2d::imageScaling
+  public var defaultSceneOrientation: Scroller2d::sceneOrientationType
+  public var defaultScaleMode: Swift::String
+  public var defaultAnchorPoint: CoreFoundation::CGPoint
+  public var defaultSceneSize: CoreFoundation::CGSize
+  public init()
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct License : Swift::Codable {
+  public init()
+  public var licenseKey: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct SceneConfig : Swift::Codable {
+  public init()
+  public var schema: Scroller2d::Schema?
+  public var levels: [Scroller2d::Level]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct ObstacleConfig : Swift::Codable {
+  public init()
+  public var schema: Scroller2d::Schema?
+  public var obstacles: [Scroller2d::Obstacle]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct CharacterConfig : Swift::Codable {
+  public init()
+  public var schema: Scroller2d::Schema?
+  public var characters: [Scroller2d::Character]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Schema : Swift::Codable {
+  public init()
+  public var schemaVersion: Swift::String?
+  public var apiVersion: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct TitleSceneConfig : Swift::Codable {
+  public init()
+  public var backgroundSounds: [Scroller2d::GameSound]?
+  public var titleSceneCharacters: [Scroller2d::CharacterLevelItem]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Level : Swift::Codable, Scroller2d::Reflectable {
+  public init()
+  public var id: Foundation::UUID?
+  public var settings: Scroller2d::LevelSettings
+  public var background: Scroller2d::Background?
+  public var ground: [Scroller2d::GroundSection]?
+  public var obstacles: [Scroller2d::ObstacleLevelItem]?
+  public var checkpoints: Scroller2d::CheckPointData?
+  public var levelEnd: Scroller2d::LevelEndData?
+  public var phaseEnd: Scroller2d::LevelEndData?
+  public var characters: [Scroller2d::CharacterLevelItem]?
+  public var coins: Scroller2d::Coins?
+  public var shields: Scroller2d::Shields?
+  public var artifacts: Scroller2d::Artifacts?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct LevelSettings : Swift::Codable, Swift::Hashable, Scroller2d::Reflectable {
+  public init()
+  public var id: Foundation::UUID?
+  public var scrollOrientation: Swift::String
+  public var fontColor: Swift::String?
+  public var sceneOrientation: Swift::String
+  public var scaleMode: Swift::String
+  public var size: Swift::String?
+  public var anchorPoint: Swift::String?
+  public static func == (a: Scroller2d::LevelSettings, b: Scroller2d::LevelSettings) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Background : Swift::Codable, Swift::Hashable, Swift::Equatable, Scroller2d::Reflectable {
+  public init()
+  public var backgrounds: [Scroller2d::BackgroundImage]?
+  public var soundEffects: [Scroller2d::GameSound]?
+  public static func == (a: Scroller2d::Background, b: Scroller2d::Background) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct BackgroundImage : Swift::Codable, Swift::Hashable, Swift::Equatable, Scroller2d::Reflectable {
+  public init()
+  public init(id: Foundation::UUID)
+  public var id: Foundation::UUID?
+  public var isVisible: Swift::Bool?
+  public var image: Swift::String?
+  public var speed: CoreFoundation::CGFloat?
+  public var scrollOrientation: Swift::String?
+  public var pinned: Swift::Bool?
+  public var pinnedRanges: [Scroller2d::PinnedRange]?
+  public var zPosition: CoreFoundation::CGFloat?
+  public static func == (a: Scroller2d::BackgroundImage, b: Scroller2d::BackgroundImage) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct PinnedRange : Swift::Codable, Swift::Hashable, Swift::Comparable, Scroller2d::Reflectable {
+  public static func < (lhs: Scroller2d::PinnedRange, rhs: Scroller2d::PinnedRange) -> Swift::Bool
+  public init()
+  public var id: Foundation::UUID?
+  public var range: Swift::String?
+  public static func == (a: Scroller2d::PinnedRange, b: Scroller2d::PinnedRange) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct GroundSection : Swift::Codable, Scroller2d::Reflectable {
+  public init()
+  public init(id: Foundation::UUID)
+  public var id: Foundation::UUID?
+  public var isVisible: Swift::Bool?
+  public var distance: Swift::String?
+  public var image: Swift::String?
+  public var groundType: Swift::String?
+  public var imageBottomLayer: Swift::String?
+  public var repeatCount: Swift::Int?
+  public var groundPhysicsAngleType: Swift::String?
+  public var stack: Swift::Bool?
+  public var anchorPoint: Swift::String?
+  public var zPosition: CoreFoundation::CGFloat?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public var extraProperties: [Scroller2d::ExtraProperties]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct GameSound : Swift::Codable, Swift::Identifiable, Swift::Equatable, Swift::Hashable, Scroller2d::Reflectable {
+  public init()
+  public init(id: Foundation::UUID? = UUID(), soundType: Swift::String? = nil, filename: Swift::String? = nil, soundExtension: Swift::String? = nil, volume: CoreFoundation::CGFloat? = 0.5, waitForCompletion: Swift::Bool? = true)
+  public var id: Foundation::UUID?
+  public var soundType: Swift::String
+  public var filename: Swift::String
+  public var soundExtension: Swift::String
+  public var volume: CoreFoundation::CGFloat?
+  public var waitForCompletion: Swift::Bool?
+  public static func == (a: Scroller2d::GameSound, b: Scroller2d::GameSound) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct ObstacleLevelItem : Swift::Codable, Scroller2d::Reflectable, Swift::Identifiable, Swift::Equatable {
+  public static func == (lhs: Scroller2d::ObstacleLevelItem, rhs: Scroller2d::ObstacleLevelItem) -> Swift::Bool
+  public static func < (lhs: Scroller2d::ObstacleLevelItem, rhs: Scroller2d::ObstacleLevelItem) -> Swift::Bool
+  public init()
+  public var id: Foundation::UUID?
+  public var elementName: Swift::String
+  public var name: Swift::String
+  public var zPosition: CoreFoundation::CGFloat
+  public var isVisible: Swift::Bool?
+  public var properties: Scroller2d::Obstacle?
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct DeviceProperties : Swift::Codable, Swift::Hashable, Scroller2d::Reflectable {
+  public init()
+  public init(deviceName: Swift::String? = nil, position: Swift::String? = nil, size: Swift::String? = nil, offset: Swift::String? = nil, offsetEdge: Swift::String? = nil, distance: Swift::String? = nil, fontSize: CoreFoundation::CGFloat? = nil, digitSize: Swift::String? = nil, selectorSize: Swift::String? = nil, altPosition: Swift::String? = nil, offsetHealthBar: Swift::String? = nil)
+  public var altPosition: Swift::String?
+  public var deviceName: Swift::String?
+  public var digitSize: Swift::String?
+  public var distance: Swift::String?
+  public var offsetEdge: Swift::String?
+  public var fontSize: CoreFoundation::CGFloat?
+  public var offsetHealthBar: Swift::String?
+  public var offset: Swift::String?
+  public var position: Swift::String?
+  public var randomPositionRange: Swift::String?
+  public var selectorSize: Swift::String?
+  public var size: Swift::String?
+  public static func == (a: Scroller2d::DeviceProperties, b: Scroller2d::DeviceProperties) -> Swift::Bool
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Obstacle : Swift::Codable, Swift::Identifiable, Scroller2d::Reflectable {
+  public init()
+  public init(id: Foundation::UUID)
+  public var id: Foundation::UUID?
+  public var elementName: Swift::String?
+  public var sceneObjectType: Swift::String?
+  public var name: Swift::String?
+  public var zPosition: CoreFoundation::CGFloat?
+  public var anchorPoint: Swift::String?
+  public var image: Swift::String?
+  public var imageType: Swift::String?
+  public var stack: Swift::Bool?
+  public var repeatCount: Swift::Int?
+  public var usePhysics: Swift::Bool?
+  public var useGravity: Swift::Bool?
+  public var isDynamic: Swift::Bool?
+  public var usePrecision: Swift::Bool?
+  public var isVisible: Swift::Bool?
+  public var alpha: CoreFoundation::CGFloat?
+  public var darken: Swift::Bool?
+  public var colorBlendFactor: CoreFoundation::CGFloat?
+  public var allowedTimesToHit: Swift::Int?
+  public var damageDirection: Swift::String?
+  public var isPinned: Swift::Bool?
+  public var objectClassType: Swift::String?
+  public var hidesBehindObject: Swift::String?
+  public var maximumDistance: Swift::String?
+  public var objectActsOn: Swift::String?
+  public var callbackFunction: Swift::String?
+  public var allowHeroAttach: Swift::Bool?
+  public var physics: Scroller2d::PhysicsProperty?
+  public var collisionMasks: Scroller2d::CollisionDetection?
+  public var animation: Scroller2d::AnimationProperty?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public var extraProperties: [Scroller2d::ExtraProperties]?
+  public var projectiles: [Scroller2d::ProjectileProperties]?
+  public var rotationProperties: Scroller2d::RotationProperties?
+  public var siblings: [Scroller2d::SiblingProperties]?
+  public var soundEffects: [Scroller2d::GameSound]?
+  public var targetDistances: Scroller2d::TargetDistances?
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct CharacterLevelItem : Swift::Codable, Swift::Identifiable, Swift::Equatable, Scroller2d::Reflectable {
+  public static func == (lhs: Scroller2d::CharacterLevelItem, rhs: Scroller2d::CharacterLevelItem) -> Swift::Bool
+  public static func < (lhs: Scroller2d::CharacterLevelItem, rhs: Scroller2d::CharacterLevelItem) -> Swift::Bool
+  public init()
+  public var id: Foundation::UUID?
+  public var elementName: Swift::String
+  public var name: Swift::String
+  public var sceneObjectType: Swift::String?
+  public var charClassType: Swift::String?
+  public var zPosition: CoreFoundation::CGFloat
+  public var isVisible: Swift::Bool?
+  public var hidesBehindObject: Swift::String?
+  public var properties: Scroller2d::Character?
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Character : Swift::Codable, Swift::Identifiable, Scroller2d::Reflectable {
+  public init()
+  public init(id: Foundation::UUID)
+  public var id: Foundation::UUID?
+  public var elementName: Swift::String?
+  public var anchorPoint: Swift::String?
+  public var image: Swift::String?
+  public var imageType: Swift::String?
+  public var imageDirection: Swift::String?
+  public var isVisible: Swift::Bool?
+  public var characterType: Swift::String?
+  public var objectClassType: Swift::String?
+  public var collisionMasks: Scroller2d::CollisionDetection?
+  public var sceneObjectType: Swift::String?
+  public var callbackFunction: Swift::String?
+  public var allowedTimesToHit: Swift::Int?
+  public var useGravity: Swift::Bool?
+  public var isDynamic: Swift::Bool?
+  public var usePrecision: Swift::Bool?
+  public var targetDistances: Scroller2d::TargetDistances?
+  public var actions: Scroller2d::Actions?
+  public var animation: Scroller2d::AnimationProperty?
+  public var physics: Scroller2d::PhysicsProperty?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public var extraProperties: [Scroller2d::ExtraProperties]?
+  public var projectiles: [Scroller2d::ProjectileProperties]?
+  public var soundEffects: [Scroller2d::GameSound]?
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct CollisionDetection : Swift::Codable, Swift::Identifiable, Swift::Equatable, Swift::Hashable, Scroller2d::Reflectable {
+  public init()
+  public var id: Foundation::UUID?
+  public var category: Swift::String?
+  public var contact: Swift::String?
+  public var collision: Swift::String?
+  public static func == (a: Scroller2d::CollisionDetection, b: Scroller2d::CollisionDetection) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct AnimationProperty : Swift::Codable, Swift::Identifiable, Swift::Equatable, Swift::Hashable, Scroller2d::Reflectable {
+  public init()
+  public var id: Foundation::UUID?
+  public var frequency: Swift::String?
+  public var moveDirection: Swift::String?
+  public var velocity: Swift::String?
+  public var animationFrameStart: Swift::Int?
+  public var changePhysics: Swift::Bool?
+  public var noPhysicsFirstFrame: Swift::Bool?
+  public var noPhysicsLastFrame: Swift::Bool?
+  public var horizontalFlip: Swift::Bool?
+  public var verticalFlip: Swift::Bool?
+  public var waitPerAnimationFrame: Scroller2d::WaitPerAnimationFrame?
+  public var delays: Scroller2d::Delays?
+  public var cycleEndProperties: [Scroller2d::CycleEndProperties]?
+  public var physics: Scroller2d::PhysicsProperty?
+  public static func == (a: Scroller2d::AnimationProperty, b: Scroller2d::AnimationProperty) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Actions : Swift::Codable {
+  public init()
+  public init(initial: Swift::String? = nil, idle: Swift::String? = nil, move: Swift::String? = nil, attack: Swift::String? = nil, toss: Swift::String? = nil, death: Swift::String? = nil)
+  public var initial: Swift::String?
+  public var idle: Swift::String?
+  public var move: Swift::String?
+  public var attack: Swift::String?
+  public var toss: Swift::String?
+  public var death: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct WaitPerAnimationFrame : Swift::Codable, Swift::Identifiable, Swift::Equatable, Swift::Hashable {
+  public init()
+  public var id: Foundation::UUID?
+  public var initial: CoreFoundation::CGFloat?
+  public var idle: CoreFoundation::CGFloat?
+  public var move: CoreFoundation::CGFloat?
+  public var attack: CoreFoundation::CGFloat?
+  public var toss: CoreFoundation::CGFloat?
+  public var cycleEnd: CoreFoundation::CGFloat?
+  public static func == (a: Scroller2d::WaitPerAnimationFrame, b: Scroller2d::WaitPerAnimationFrame) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct TargetDistances : Swift::Codable, Swift::Identifiable, Swift::Equatable, Swift::Hashable {
+  public init()
+  public var id: Foundation::UUID?
+  public var maximumRange: Swift::String?
+  public var near: Swift::String?
+  public var move: Swift::String?
+  public var attack: Swift::String?
+  public var toss: Swift::String?
+  public var moveSpeed: CoreFoundation::CGFloat?
+  public static func == (a: Scroller2d::TargetDistances, b: Scroller2d::TargetDistances) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Delays : Swift::Codable, Swift::Identifiable, Swift::Equatable, Swift::Hashable {
+  public init()
+  public var id: Foundation::UUID?
+  public var fade: CoreFoundation::CGFloat?
+  public var initial: CoreFoundation::CGFloat?
+  public var idle: CoreFoundation::CGFloat?
+  public var movement: CoreFoundation::CGFloat?
+  public var cycleEnd: CoreFoundation::CGFloat?
+  public var fadeRange: Swift::String?
+  public var initialRange: Swift::String?
+  public var idleRange: Swift::String?
+  public var movementRange: Swift::String?
+  public var cycleEndRange: Swift::String?
+  public static func == (a: Scroller2d::Delays, b: Scroller2d::Delays) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct PhysicsProperty : Swift::Codable, Swift::Identifiable, Swift::Equatable, Swift::Hashable {
+  public init()
+  public var id: Foundation::UUID?
+  public var edges: [Scroller2d::EdgePhysics]?
+  public var radiuses: [Scroller2d::RadiusPhysics]?
+  public var rectangles: [Scroller2d::RectanglePhysics]?
+  public var polygons: [Scroller2d::PolyPhysics]?
+  public static func == (a: Scroller2d::PhysicsProperty, b: Scroller2d::PhysicsProperty) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct EdgePhysics : Swift::Codable, Swift::Hashable, Swift::Identifiable, Scroller2d::Reflectable {
+  public init()
+  public init(startPoint: Swift::String, endPoint: Swift::String, action: Swift::String? = nil, framesAffected: Swift::String? = nil)
+  public var id: Foundation::UUID?
+  public var action: Swift::String?
+  public var startPoint: Swift::String
+  public var endPoint: Swift::String
+  public var framesAffected: Swift::String?
+  public static func == (a: Scroller2d::EdgePhysics, b: Scroller2d::EdgePhysics) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct PolyPhysics : Swift::Codable, Swift::Hashable, Swift::Identifiable, Scroller2d::Reflectable {
+  public init()
+  public init(direction: Swift::String, points: [Scroller2d::Point], action: Swift::String? = nil, framesAffected: Swift::String? = nil)
+  public var id: Foundation::UUID?
+  public var action: Swift::String?
+  public var direction: Swift::String
+  public var points: [Scroller2d::Point]
+  public var framesAffected: Swift::String?
+  public static func == (a: Scroller2d::PolyPhysics, b: Scroller2d::PolyPhysics) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Point : Swift::Codable, Swift::Hashable, Swift::Identifiable {
+  public init()
+  public init(point: Swift::String)
+  public var id: Foundation::UUID?
+  public var action: Swift::String?
+  public var point: Swift::String
+  public static func == (a: Scroller2d::Point, b: Scroller2d::Point) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct RadiusPhysics : Swift::Codable, Swift::Hashable, Swift::Identifiable, Scroller2d::Reflectable {
+  public init()
+  public init(radius: CoreFoundation::CGFloat = 0, center: Swift::String? = nil, action: Swift::String? = nil, framesAffected: Swift::String? = nil)
+  public var id: Foundation::UUID?
+  public var action: Swift::String?
+  public var radius: CoreFoundation::CGFloat
+  public var center: Swift::String?
+  public var framesAffected: Swift::String?
+  public static func == (a: Scroller2d::RadiusPhysics, b: Scroller2d::RadiusPhysics) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct RectanglePhysics : Swift::Codable, Swift::Hashable, Swift::Identifiable, Scroller2d::Reflectable {
+  public init()
+  public init(size: Swift::String = "", center: Swift::String? = nil, action: Swift::String? = nil, framesAffected: Swift::String? = nil)
+  public var id: Foundation::UUID?
+  public var action: Swift::String?
+  public var size: Swift::String
+  public var center: Swift::String?
+  public var framesAffected: Swift::String?
+  public static func == (a: Scroller2d::RectanglePhysics, b: Scroller2d::RectanglePhysics) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct CheckPointData : Swift::Codable {
+  public init()
+  public init(image: Swift::String? = nil, animateFromImage: Swift::Int? = nil, soundEffects: [Scroller2d::GameSound]? = [], locations: [Scroller2d::CheckPointLocation]? = [])
+  public var image: Swift::String?
+  public var animateFromImage: Swift::Int?
+  public var soundEffects: [Scroller2d::GameSound]?
+  public var locations: [Scroller2d::CheckPointLocation]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct CheckPointLocation : Swift::Codable {
+  public init()
+  public init(id: Foundation::UUID)
+  public var id: Foundation::UUID?
+  public var elementName: Swift::String?
+  public var image: Swift::String?
+  public var useGravity: Swift::Bool?
+  public var isVisible: Swift::Bool?
+  public var zPosition: CoreFoundation::CGFloat
+  public var devices: [Scroller2d::DeviceProperties]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct LevelEndData : Swift::Codable, Swift::Equatable, Scroller2d::Reflectable, Swift::Identifiable {
+  public init()
+  public var id: Foundation::UUID?
+  public var windowOffset: Swift::String?
+  public var zPosition: CoreFoundation::CGFloat?
+  public var windowItems: [Scroller2d::WindowItem]?
+  public var characters: [Scroller2d::CharacterLevelItem]?
+  public var obstacles: [Scroller2d::ObstacleLevelItem]?
+  public var soundEffects: [Scroller2d::GameSound]?
+  public static func == (a: Scroller2d::LevelEndData, b: Scroller2d::LevelEndData) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct WindowItem : Swift::Codable, Swift::Equatable, Scroller2d::Reflectable, Swift::Identifiable {
+  public static func == (lhs: Scroller2d::WindowItem, rhs: Scroller2d::WindowItem) -> Swift::Bool
+  public static func < (lhs: Scroller2d::WindowItem, rhs: Scroller2d::WindowItem) -> Swift::Bool
+  public init()
+  public var id: Foundation::UUID?
+  public var type: Swift::String
+  public var image: Swift::String?
+  public var text: Swift::String?
+  public var fontInfo: Scroller2d::FontInfo?
+  public var zPosition: CoreFoundation::CGFloat
+  public var devices: [Scroller2d::DeviceProperties]?
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct FontInfo : Swift::Codable {
+  public init()
+  public var fontName: Swift::String?
+  public var fontSize: CoreFoundation::CGFloat?
+  public var fontColor: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct ExtraProperties : Swift::Codable {
+  public init()
+  public var name: Swift::String
+  public var value: Swift::String
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct RotationProperties : Swift::Codable, Scroller2d::Reflectable {
+  public init()
+  public var rotation: CoreFoundation::CGFloat?
+  public var rotateForever: Swift::Bool?
+  public var rotateDuration: CoreFoundation::CGFloat?
+  public var rotationPin: Swift::Bool?
+  public var rotateType: Swift::String?
+  public var rotateDelay: CoreFoundation::CGFloat?
+  public var rotateCount: CoreFoundation::CGFloat?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct CycleEndProperties : Swift::Codable, Swift::Identifiable, Swift::Equatable, Swift::Hashable {
+  public init()
+  public var id: Foundation::UUID?
+  public var obstacleAffected: Swift::String?
+  public var fadeObstacle: Swift::Bool?
+  public var atlasName: Swift::String?
+  public var objectClassType: Swift::String?
+  public var collisionMasks: Scroller2d::CollisionDetection?
+  public var removeFromParentAtEnd: Swift::Bool?
+  public var animationDuration: CoreFoundation::CGFloat?
+  public var callbackFunction: Swift::String?
+  public var zPosition: CoreFoundation::CGFloat?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public var physics: Scroller2d::PhysicsProperty?
+  public static func == (a: Scroller2d::CycleEndProperties, b: Scroller2d::CycleEndProperties) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct ProjectileProperties : Swift::Codable {
+  public init()
+  public var image: Swift::String?
+  public var imageDirection: Swift::String?
+  public var objectClassType: Swift::String?
+  public var projectileType: Swift::String?
+  public var zPosition: CoreFoundation::CGFloat?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public var physics: Scroller2d::PhysicsProperty?
+  public var velocityRanges: [Scroller2d::VelocityRangeProperties]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct VelocityRangeProperties : Swift::Codable {
+  public init()
+  public var range: Swift::String?
+  public var velocity: Swift::String?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct SiblingProperties : Swift::Codable {
+  public init()
+  public var image: Swift::String?
+  public var zPosition: CoreFoundation::CGFloat?
+  public var siblingType: Swift::String?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Shields : Swift::Codable {
+  public init()
+  public init(image: Swift::String? = nil, shields: [Scroller2d::Shield]? = [], soundEffects: [Scroller2d::GameSound]? = [])
+  public var image: Swift::String?
+  public var shields: [Scroller2d::Shield]?
+  public var soundEffects: [Scroller2d::GameSound]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Shield : Swift::Codable {
+  public init()
+  public init(id: Foundation::UUID)
+  public var id: Foundation::UUID?
+  public var image: Swift::String?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public var useGravity: Swift::Bool?
+  public var elementName: Swift::String?
+  public var isVisible: Swift::Bool?
+  public var timed: CoreFoundation::CGFloat?
+  public var zPosition: CoreFoundation::CGFloat?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Artifacts : Swift::Codable {
+  public init()
+  public init(artifacts: [Scroller2d::Artifact]? = [], startArtifactNumber: Swift::Int? = nil, soundEffects: [Scroller2d::GameSound]? = [])
+  public var artifacts: [Scroller2d::Artifact]?
+  public var image: Swift::String?
+  public var soundEffects: [Scroller2d::GameSound]?
+  public var startArtifactNumber: Swift::Int?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Artifact : Swift::Codable {
+  public init()
+  public init(id: Foundation::UUID)
+  public var id: Foundation::UUID?
+  public var alpha: CoreFoundation::CGFloat?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public var useGravity: Swift::Bool?
+  public var elementName: Swift::String?
+  public var image: Swift::String?
+  public var isVisible: Swift::Bool?
+  public var objectClassType: Swift::String?
+  public var zPosition: CoreFoundation::CGFloat?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Coins : Swift::Codable {
+  public init()
+  public var coins: [Scroller2d::Coin]?
+  public var image: Swift::String?
+  public var startCoinNumber: Swift::Int?
+  public var repeatDistance: Swift::String?
+  public var soundEffects: [Scroller2d::GameSound]?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct Coin : Swift::Codable {
+  public init()
+  public init(id: Foundation::UUID)
+  public var id: Foundation::UUID?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public var elementName: Swift::String?
+  public var image: Swift::String?
+  public var isVisible: Swift::Bool?
+  public var repeatCount: Swift::Int?
+  public var stack: Swift::Bool?
+  public var useGravity: Swift::Bool?
+  public var zPosition: CoreFoundation::CGFloat?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public init(from decoder: any Swift::Decoder) throws
+}
+public struct TotalCoins {
+  public init()
+  public var coinsUsed: Swift::Int
+  public var totalCollected: Swift::Int
+}
+public struct GenericObject : Swift::Codable, Swift::Identifiable, Scroller2d::Reflectable, Swift::Hashable {
+  public init()
+  public var id: Foundation::UUID?
+  public var elementName: Swift::String?
+  public var image: Swift::String?
+  public var imageType: Swift::String?
+  public var sceneObjectType: Swift::String?
+  public var objectClassType: Swift::String?
+  public var collisionMasks: Scroller2d::CollisionDetection?
+  public var useGravity: Swift::Bool?
+  public var isDynamic: Swift::Bool?
+  public var groundType: Swift::String?
+  public var devices: [Scroller2d::DeviceProperties]?
+  public var physics: Scroller2d::PhysicsProperty?
+  public var animation: Scroller2d::AnimationProperty?
+  public static func == (a: Scroller2d::GenericObject, b: Scroller2d::GenericObject) -> Swift::Bool
+  public typealias ID = Foundation::UUID?
+  public func encode(to encoder: any Swift::Encoder) throws
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+  public init(from decoder: any Swift::Decoder) throws
+}
+extension Swift::String.Scroller2d::typeList : Swift::Equatable {}
+extension Swift::String.Scroller2d::typeList : Swift::Hashable {}
+extension Swift::String.Scroller2d::typeList : Swift::RawRepresentable {}
+extension Scroller2d::siblingType : Swift::Equatable {}
+extension Scroller2d::siblingType : Swift::Hashable {}
+extension Scroller2d::siblingType : Swift::RawRepresentable {}
+extension Scroller2d::clubAttachment : Swift::Equatable {}
+extension Scroller2d::clubAttachment : Swift::Hashable {}
+extension Scroller2d::clubAttachment : Swift::RawRepresentable {}
+extension Scroller2d::configType : Swift::Equatable {}
+extension Scroller2d::configType : Swift::Hashable {}
+extension Scroller2d::configType : Swift::RawRepresentable {}
+extension Scroller2d::deviceName : Swift::Equatable {}
+extension Scroller2d::deviceName : Swift::Hashable {}
+extension Scroller2d::deviceName : Swift::RawRepresentable {}
+extension Scroller2d::sceneOrientationType : Swift::Equatable {}
+extension Scroller2d::sceneOrientationType : Swift::Hashable {}
+extension Scroller2d::sceneOrientationType : Swift::RawRepresentable {}
+extension Scroller2d::enemyStateType : Swift::Equatable {}
+extension Scroller2d::enemyStateType : Swift::Hashable {}
+extension Scroller2d::enemyStateType : Swift::RawRepresentable {}
+extension Scroller2d::executeStateType : Swift::Equatable {}
+extension Scroller2d::executeStateType : Swift::Hashable {}
+extension Scroller2d::executeStateType : Swift::RawRepresentable {}
+extension Scroller2d::fieldList : Swift::Equatable {}
+extension Scroller2d::fieldList : Swift::Hashable {}
+extension Scroller2d::fieldList : Swift::RawRepresentable {}
+extension Scroller2d::groundBaseType : Swift::Equatable {}
+extension Scroller2d::groundBaseType : Swift::Hashable {}
+extension Scroller2d::groundBaseType : Swift::RawRepresentable {}
+extension Scroller2d::groundPhysicsAngleType : Swift::Equatable {}
+extension Scroller2d::groundPhysicsAngleType : Swift::Hashable {}
+extension Scroller2d::groundPhysicsAngleType : Swift::RawRepresentable {}
+extension Scroller2d::imageScaling : Swift::Equatable {}
+extension Scroller2d::imageScaling : Swift::Hashable {}
+extension Scroller2d::imageScaling : Swift::RawRepresentable {}
+extension Scroller2d::imageType : Swift::Equatable {}
+extension Scroller2d::imageType : Swift::Hashable {}
+extension Scroller2d::imageType : Swift::RawRepresentable {}
+extension Scroller2d::animationMoveDirection : Swift::Equatable {}
+extension Scroller2d::animationMoveDirection : Swift::Hashable {}
+extension Scroller2d::animationMoveDirection : Swift::RawRepresentable {}
+extension Scroller2d::projectileType : Swift::Equatable {}
+extension Scroller2d::projectileType : Swift::Hashable {}
+extension Scroller2d::projectileType : Swift::RawRepresentable {}
+extension Scroller2d::rotationType : Swift::Equatable {}
+extension Scroller2d::rotationType : Swift::Hashable {}
+extension Scroller2d::rotationType : Swift::RawRepresentable {}
+extension Scroller2d::scrollOrientationType : Swift::Equatable {}
+extension Scroller2d::scrollOrientationType : Swift::Hashable {}
+extension Scroller2d::scrollOrientationType : Swift::RawRepresentable {}
+extension Scroller2d::soundType : Swift::Equatable {}
+extension Scroller2d::soundType : Swift::Hashable {}
+extension Scroller2d::soundType : Swift::RawRepresentable {}
+extension Scroller2d::soundExtension : Swift::Equatable {}
+extension Scroller2d::soundExtension : Swift::Hashable {}
+extension Scroller2d::soundExtension : Swift::RawRepresentable {}
+extension Scroller2d::actionType : Swift::RawRepresentable {}
+extension Scroller2d::windowItemType : Swift::Equatable {}
+extension Scroller2d::windowItemType : Swift::Hashable {}
+extension Scroller2d::windowItemType : Swift::RawRepresentable {}
+extension Scroller2d::callbackType : Swift::Equatable {}
+extension Scroller2d::callbackType : Swift::Hashable {}
+extension Scroller2d::callbackType : Swift::RawRepresentable {}
+extension Scroller2d::CameraFollowHelper : Swift::Sendable {}
+extension Scroller2d::GroundConstructionHelper : Swift::Sendable {}
+extension Scroller2d::GroundConstructionHelper.Scroller2d::Result : Swift::Sendable {}
+extension Scroller2d::LevelAssemblyHelper : Swift::Sendable {}
+extension Scroller2d::LevelAssemblyHelper.Scroller2d::Resources : Swift::Sendable {}
+extension Scroller2d::LevelAssemblyHelper.Scroller2d::Result : Swift::Sendable {}
