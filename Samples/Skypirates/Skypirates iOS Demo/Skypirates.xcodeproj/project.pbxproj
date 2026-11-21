@@ -1,0 +1,237 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000008 /* SkypiratesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000001 /* SkypiratesApp.swift */; };
+		000000000000000000000009 /* LevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000002 /* LevelData.swift */; };
+		00000000000000000000000A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000003 /* GameScene.swift */; };
+		00000000000000000000000B /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000004 /* Assets */; };
+		00000000000000000000000C /* Levels in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000005 /* Levels */; };
+		00000000000000000000001D /* LevelArt.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001C /* LevelArt.xcassets */; };
+		C58437A230AA01210041DC30 /* Scroller2d.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58437A130AA01210041DC30 /* Scroller2d.xcframework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000001 /* SkypiratesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkypiratesApp.swift; sourceTree = "<group>"; };
+		000000000000000000000002 /* LevelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelData.swift; sourceTree = "<group>"; };
+		000000000000000000000003 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		000000000000000000000004 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		000000000000000000000005 /* Levels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Levels; sourceTree = "<group>"; };
+		000000000000000000000007 /* Skypirates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Skypirates.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00000000000000000000001C /* LevelArt.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LevelArt.xcassets; sourceTree = "<group>"; };
+		C518A6BD30ABF6220085C1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C58437A130AA01210041DC30 /* Scroller2d.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Scroller2d.xcframework; path = "../../DesertRuins/Scroller2d Api/Scroller2d.xcframework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000000013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58437A230AA01210041DC30 /* Scroller2d.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00000000000000000000000E /* Skypirates */ = {
+			isa = PBXGroup;
+			children = (
+				C518A6BD30ABF6220085C1B4 /* Info.plist */,
+				000000000000000000000001 /* SkypiratesApp.swift */,
+				000000000000000000000002 /* LevelData.swift */,
+				000000000000000000000003 /* GameScene.swift */,
+				000000000000000000000004 /* Assets */,
+				000000000000000000000005 /* Levels */,
+				00000000000000000000001C /* LevelArt.xcassets */,
+			);
+			path = Skypirates;
+			sourceTree = "<group>";
+		};
+		00000000000000000000000F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000007 /* Skypirates.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000000010 = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000000E /* Skypirates */,
+				C58437A030AA01210041DC30 /* Frameworks */,
+				00000000000000000000000F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C58437A030AA01210041DC30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C58437A130AA01210041DC30 /* Scroller2d.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00000000000000000000001A /* Skypirates */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000019 /* Build configuration list for PBXNativeTarget "Skypirates" */;
+			buildPhases = (
+				000000000000000000000011 /* Sources */,
+				000000000000000000000013 /* Frameworks */,
+				000000000000000000000012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Skypirates;
+			productName = Skypirates;
+			productReference = 000000000000000000000007 /* Skypirates.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00000000000000000000001B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = 000000000000000000000018 /* Build configuration list for PBXProject "Skypirates" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000010;
+			productRefGroup = 00000000000000000000000F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00000000000000000000001A /* Skypirates */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000000000000000000000B /* Assets in Resources */,
+				00000000000000000000000C /* Levels in Resources */,
+				00000000000000000000001D /* LevelArt.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000011 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000008 /* SkypiratesApp.swift in Sources */,
+				000000000000000000000009 /* LevelData.swift in Sources */,
+				00000000000000000000000A /* GameScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		000000000000000000000015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Skypirates/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coolmonkeyllc.skypiratesdemo;
+				PRODUCT_NAME = Skypirates;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000000000000000000000016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		000000000000000000000017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Skypirates/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coolmonkeyllc.skypiratesdemo;
+				PRODUCT_NAME = Skypirates;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000018 /* Build configuration list for PBXProject "Skypirates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000014 /* Debug */,
+				000000000000000000000016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000019 /* Build configuration list for PBXNativeTarget "Skypirates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000015 /* Debug */,
+				000000000000000000000017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00000000000000000000001B /* Project object */;
+}

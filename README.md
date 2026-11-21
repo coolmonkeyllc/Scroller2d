@@ -14,6 +14,11 @@ Move a collectible in LevelEditor, save the level, and see the change in the Spr
 
 **[Watch the editor-to-game demo](https://scroller2d.com/videos/Scroller2D%20Editor%20to%20Game.mp4)**
 
+## Playable samples
+
+- **[Desert Ruins](Samples/DesertRuins/README.md)** — a horizontal platformer with collectibles, checkpoints, and combat.
+- **[Skypirates](Samples/Skypirates/README.md)** — a top-down propeller-plane game demonstrating camera follow in all directions, enemy aircraft, and ship targets.
+
 ## Tutorials
 
 Start with a working example, then explore how Scroller2d fits into your game.
@@ -57,5 +62,5 @@ or licensing questions, use the [contact page](https://scroller2d.com/Contact).
 
 ## Demo licensing
 
-The Desert Ruins demo Swift code is MIT licensed. The Scroller2d API, LevelEditor,
-and artwork have separate terms. See [component licensing](Samples/DesertRuins/LICENSING.md).
+The Desert Ruins and Skypirates demo Swift code is MIT licensed. The Scroller2d API, LevelEditor,
+and artwork have separate terms. See [Desert Ruins component licensing](Samples/DesertRuins/LICENSING.md) and [Skypirates licensing](Samples/Skypirates/Skypirates%20iOS%20Demo/README.md#licensing-and-artwork).

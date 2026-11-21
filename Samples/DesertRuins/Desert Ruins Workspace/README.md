@@ -35,6 +35,6 @@ The Level End section defines the results panel shown after the player takes the
 
 ## Reuse
 
-The artwork was drawn procedurally for this sample. The music and sound effects were synthesized from scratch. No third-party art, recordings, or samples were incorporated. The explorer is an original, unnamed adventure character.
+The sample began with procedural artwork and synthesized audio. Its visuals were later refined with AI assistance toward rounded, outlined cartoon sprites. See [ARTWORK.md](../Desert%20Ruins%20iOS%20Demo/ARTWORK.md) for the current inventory, provenance notes, and asset workflow. The explorer is an original adventure character.
 
 The art and audio in this workspace may be copied, edited, used commercially, and redistributed without attribution. To the extent any rights in those assets are held by the creator of this package, they are waived to the extent permitted by law. This applies to the supplied art and audio. Scroller2d software and API license terms are separate.

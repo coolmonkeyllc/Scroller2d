@@ -66,3 +66,6 @@ Match the names saved in the level to the names your game resolves at runtime. T
 For an automated simulator check, pass `--verify-gameplay` as a Debug launch argument. The app drives the controls and writes a `DESERTRUINS_SMOKE_PASSED` or `DESERTRUINS_SMOKE_FAILED` line to the console. Remove the argument to play or record manually.
 
 The original sample art and audio may be reused without attribution. Scroller2D’s software and API license terms are separate.
+
+For asset provenance, source dimensions, reconstructed design briefs, and the audio
+inventory, see [ARTWORK.md](ARTWORK.md).
