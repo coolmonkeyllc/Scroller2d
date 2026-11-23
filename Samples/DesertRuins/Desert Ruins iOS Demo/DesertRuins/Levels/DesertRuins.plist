@@ -131,6 +131,13 @@
 					<string>D06F13BD-C1F5-4655-AB28-98799174AD54</string>
 					<key>groundType</key>
 					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
 					<key>image</key>
 					<string>sandstone_left</string>
 					<key>devices</key>
@@ -154,6 +161,13 @@
 					<string>7B6AA52A-65E5-48F6-83B4-CECD534E8624</string>
 					<key>groundType</key>
 					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
 					<key>image</key>
 					<string>sandstone</string>
 					<key>devices</key>
@@ -177,6 +191,13 @@
 					<string>94BBF219-DD33-4231-875D-EE74DC5BA8CB</string>
 					<key>groundType</key>
 					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
 					<key>image</key>
 					<string>sandstone_right</string>
 					<key>devices</key>
@@ -221,6 +242,13 @@
 					<string>894A72AD-8752-42E4-91FA-5E7B370A5B7E</string>
 					<key>groundType</key>
 					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
 					<key>image</key>
 					<string>sandstone_left</string>
 					<key>devices</key>
@@ -244,6 +272,13 @@
 					<string>217F311F-A32C-45CE-99B2-03CB803F33D8</string>
 					<key>groundType</key>
 					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
 					<key>image</key>
 					<string>sandstone</string>
 					<key>devices</key>
@@ -267,6 +302,13 @@
 					<string>A98C3173-5F7D-456E-A66D-2C64C122CC59</string>
 					<key>groundType</key>
 					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
 					<key>image</key>
 					<string>sandstone_right</string>
 					<key>devices</key>

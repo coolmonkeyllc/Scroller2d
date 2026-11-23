@@ -1,9 +1,6 @@
-// Copyright (c) 2026 Cool Monkey LLC
-// SPDX-License-Identifier: MIT
-// Demo Swift source only; see ../LICENSE for scope and terms.
-
 import SpriteKit
 import UIKit
+import Scroller2d
 
 /// UIKit application entry point. Scroller2d is not used directly in this file; `GameScene` owns that integration.
 @main
@@ -14,10 +11,13 @@ final class DesertRuinsWindowScene: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     /// Creates the app window, installs the game view controller, and displays it for the connected scene.
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
-               options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
-        let window = UIWindow(windowScene: windowScene)
+
+		print("Scroller2d Api Library Version: \(LibraryVersion.getVersion())")
+		print("Scroller2d Api Schema Version: \(LibraryVersion.getSchemaVersion())")
+
+		let window = UIWindow(windowScene: windowScene)
         window.rootViewController = GameViewController()
         self.window = window
         window.makeKeyAndVisible()

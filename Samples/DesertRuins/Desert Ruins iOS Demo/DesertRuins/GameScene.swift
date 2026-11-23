@@ -1,7 +1,3 @@
-// Copyright (c) 2026 Cool Monkey LLC
-// SPDX-License-Identifier: MIT
-// Demo Swift source only; see ../LICENSE for scope and terms.
-
 import Scroller2d
 import SpriteKit
 import UIKit
@@ -168,8 +164,6 @@ final class GameScene: AppSharedSceneBase {
             resources: data.resources,
             scene: self,
             groundTexture: { try self.data.texture($0, in: "Ground") },
-            groundCategoryBitMask: Body.solid,
-            groundCollisionBitMask: Body.player,
             groundCollisionTopInset: 2,
             target: player,
             configureObstacle: { try self.configureObstacle(&$0) },

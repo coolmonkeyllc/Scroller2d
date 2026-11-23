@@ -15263,8 +15263,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "BrightWater",
-            "printedName": "BrightWater",
+            "name": "Gap",
+            "printedName": "Gap",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -15294,9 +15294,12 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:10Scroller2d14groundBaseTypeO11BrightWateryA2CmF",
-            "mangledName": "$s10Scroller2d14groundBaseTypeO11BrightWateryA2CmF",
-            "moduleName": "Scroller2d"
+            "usr": "s:10Scroller2d14groundBaseTypeO3GapyA2CmF",
+            "mangledName": "$s10Scroller2d14groundBaseTypeO3GapyA2CmF",
+            "moduleName": "Scroller2d",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -15337,80 +15340,6 @@
           },
           {
             "kind": "Var",
-            "name": "Lava",
-            "printedName": "Lava",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Scroller2d.groundBaseType.Type) -> Scroller2d.groundBaseType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "groundBaseType",
-                    "printedName": "Scroller2d.groundBaseType",
-                    "usr": "s:10Scroller2d14groundBaseTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "Scroller2d.groundBaseType.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "groundBaseType",
-                        "printedName": "Scroller2d.groundBaseType",
-                        "usr": "s:10Scroller2d14groundBaseTypeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10Scroller2d14groundBaseTypeO4LavayA2CmF",
-            "mangledName": "$s10Scroller2d14groundBaseTypeO4LavayA2CmF",
-            "moduleName": "Scroller2d"
-          },
-          {
-            "kind": "Var",
-            "name": "MuddyWater",
-            "printedName": "MuddyWater",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Scroller2d.groundBaseType.Type) -> Scroller2d.groundBaseType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "groundBaseType",
-                    "printedName": "Scroller2d.groundBaseType",
-                    "usr": "s:10Scroller2d14groundBaseTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "Scroller2d.groundBaseType.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "groundBaseType",
-                        "printedName": "Scroller2d.groundBaseType",
-                        "usr": "s:10Scroller2d14groundBaseTypeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10Scroller2d14groundBaseTypeO10MuddyWateryA2CmF",
-            "mangledName": "$s10Scroller2d14groundBaseTypeO10MuddyWateryA2CmF",
-            "moduleName": "Scroller2d"
-          },
-          {
-            "kind": "Var",
             "name": "None",
             "printedName": "None",
             "children": [
@@ -15444,118 +15373,10 @@
             "declKind": "EnumElement",
             "usr": "s:10Scroller2d14groundBaseTypeO4NoneyA2CmF",
             "mangledName": "$s10Scroller2d14groundBaseTypeO4NoneyA2CmF",
-            "moduleName": "Scroller2d"
-          },
-          {
-            "kind": "Var",
-            "name": "Spike",
-            "printedName": "Spike",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Scroller2d.groundBaseType.Type) -> Scroller2d.groundBaseType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "groundBaseType",
-                    "printedName": "Scroller2d.groundBaseType",
-                    "usr": "s:10Scroller2d14groundBaseTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "Scroller2d.groundBaseType.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "groundBaseType",
-                        "printedName": "Scroller2d.groundBaseType",
-                        "usr": "s:10Scroller2d14groundBaseTypeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10Scroller2d14groundBaseTypeO5SpikeyA2CmF",
-            "mangledName": "$s10Scroller2d14groundBaseTypeO5SpikeyA2CmF",
-            "moduleName": "Scroller2d"
-          },
-          {
-            "kind": "Var",
-            "name": "ToxicGreen",
-            "printedName": "ToxicGreen",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Scroller2d.groundBaseType.Type) -> Scroller2d.groundBaseType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "groundBaseType",
-                    "printedName": "Scroller2d.groundBaseType",
-                    "usr": "s:10Scroller2d14groundBaseTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "Scroller2d.groundBaseType.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "groundBaseType",
-                        "printedName": "Scroller2d.groundBaseType",
-                        "usr": "s:10Scroller2d14groundBaseTypeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10Scroller2d14groundBaseTypeO10ToxicGreenyA2CmF",
-            "mangledName": "$s10Scroller2d14groundBaseTypeO10ToxicGreenyA2CmF",
-            "moduleName": "Scroller2d"
-          },
-          {
-            "kind": "Var",
-            "name": "Water",
-            "printedName": "Water",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Scroller2d.groundBaseType.Type) -> Scroller2d.groundBaseType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "groundBaseType",
-                    "printedName": "Scroller2d.groundBaseType",
-                    "usr": "s:10Scroller2d14groundBaseTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "Scroller2d.groundBaseType.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "groundBaseType",
-                        "printedName": "Scroller2d.groundBaseType",
-                        "usr": "s:10Scroller2d14groundBaseTypeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:10Scroller2d14groundBaseTypeO5WateryA2CmF",
-            "mangledName": "$s10Scroller2d14groundBaseTypeO5WateryA2CmF",
-            "moduleName": "Scroller2d"
+            "moduleName": "Scroller2d",
+            "declAttributes": [
+              "RawDocComment"
+            ]
           },
           {
             "kind": "Var",
@@ -15575,7 +15396,8 @@
             "moduleName": "Scroller2d",
             "static": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "accessors": [
               {
@@ -33475,18 +33297,37 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "GroundConstructionHelper",
-        "printedName": "GroundConstructionHelper",
+        "name": "GroundCreationResult",
+        "printedName": "GroundCreationResult",
         "children": [
           {
-            "kind": "TypeDecl",
-            "name": "Result",
-            "printedName": "Result",
+            "kind": "Var",
+            "name": "root",
+            "printedName": "root",
             "children": [
               {
-                "kind": "Var",
-                "name": "root",
-                "printedName": "root",
+                "kind": "TypeNominal",
+                "name": "SKNode",
+                "printedName": "SpriteKit.SKNode",
+                "usr": "c:objc(cs)SKNode"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Scroller2d20GroundCreationResultV4rootSo6SKNodeCvp",
+            "mangledName": "$s10Scroller2d20GroundCreationResultV4rootSo6SKNodeCvp",
+            "moduleName": "Scroller2d",
+            "declAttributes": [
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -33495,43 +33336,51 @@
                     "usr": "c:objc(cs)SKNode"
                   }
                 ],
-                "declKind": "Var",
-                "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV4rootSo6SKNodeCvp",
-                "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV4rootSo6SKNodeCvp",
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d20GroundCreationResultV4rootSo6SKNodeCvg",
+                "mangledName": "$s10Scroller2d20GroundCreationResultV4rootSo6SKNodeCvg",
                 "moduleName": "Scroller2d",
-                "declAttributes": [
-                  "Custom",
-                  "HasStorage",
-                  "AccessControl"
-                ],
-                "isLet": true,
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SKNode",
-                        "printedName": "SpriteKit.SKNode",
-                        "usr": "c:objc(cs)SKNode"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV4rootSo6SKNodeCvg",
-                    "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV4rootSo6SKNodeCvg",
-                    "moduleName": "Scroller2d",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "surfaces",
+            "printedName": "surfaces",
+            "children": [
               {
-                "kind": "Var",
-                "name": "surfaces",
-                "printedName": "surfaces",
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CoreFoundation.CGRect]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGRect",
+                    "printedName": "CoreFoundation.CGRect",
+                    "usr": "c:@S@CGRect"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Scroller2d20GroundCreationResultV8surfacesSaySo6CGRectVGvp",
+            "mangledName": "$s10Scroller2d20GroundCreationResultV8surfacesSaySo6CGRectVGvp",
+            "moduleName": "Scroller2d",
+            "declAttributes": [
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -33548,51 +33397,43 @@
                     "usr": "s:Sa"
                   }
                 ],
-                "declKind": "Var",
-                "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV8surfacesSaySo6CGRectVGvp",
-                "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV8surfacesSaySo6CGRectVGvp",
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d20GroundCreationResultV8surfacesSaySo6CGRectVGvg",
+                "mangledName": "$s10Scroller2d20GroundCreationResultV8surfacesSaySo6CGRectVGvg",
                 "moduleName": "Scroller2d",
-                "declAttributes": [
-                  "Custom",
-                  "HasStorage",
-                  "AccessControl"
-                ],
-                "isLet": true,
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[CoreFoundation.CGRect]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CGRect",
-                            "printedName": "CoreFoundation.CGRect",
-                            "usr": "c:@S@CGRect"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV8surfacesSaySo6CGRectVGvg",
-                    "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV8surfacesSaySo6CGRectVGvg",
-                    "moduleName": "Scroller2d",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bounds",
+            "printedName": "bounds",
+            "children": [
               {
-                "kind": "Var",
-                "name": "bounds",
-                "printedName": "bounds",
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Scroller2d20GroundCreationResultV6boundsSo6CGRectVvp",
+            "mangledName": "$s10Scroller2d20GroundCreationResultV6boundsSo6CGRectVvp",
+            "moduleName": "Scroller2d",
+            "declAttributes": [
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -33601,43 +33442,43 @@
                     "usr": "c:@S@CGRect"
                   }
                 ],
-                "declKind": "Var",
-                "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV6boundsSo6CGRectVvp",
-                "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV6boundsSo6CGRectVvp",
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d20GroundCreationResultV6boundsSo6CGRectVvg",
+                "mangledName": "$s10Scroller2d20GroundCreationResultV6boundsSo6CGRectVvg",
                 "moduleName": "Scroller2d",
-                "declAttributes": [
-                  "Custom",
-                  "HasStorage",
-                  "AccessControl"
-                ],
-                "isLet": true,
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CGRect",
-                        "printedName": "CoreFoundation.CGRect",
-                        "usr": "c:@S@CGRect"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV6boundsSo6CGRectVvg",
-                    "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV6boundsSo6CGRectVvg",
-                    "moduleName": "Scroller2d",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "endPoint",
+            "printedName": "endPoint",
+            "children": [
               {
-                "kind": "Var",
-                "name": "endPoint",
-                "printedName": "endPoint",
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Scroller2d20GroundCreationResultV8endPointSo7CGPointVvp",
+            "mangledName": "$s10Scroller2d20GroundCreationResultV8endPointSo7CGPointVvp",
+            "moduleName": "Scroller2d",
+            "declAttributes": [
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -33646,199 +33487,47 @@
                     "usr": "c:@S@CGPoint"
                   }
                 ],
-                "declKind": "Var",
-                "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV8endPointSo7CGPointVvp",
-                "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV8endPointSo7CGPointVvp",
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d20GroundCreationResultV8endPointSo7CGPointVvg",
+                "mangledName": "$s10Scroller2d20GroundCreationResultV8endPointSo7CGPointVvg",
                 "moduleName": "Scroller2d",
-                "declAttributes": [
-                  "Custom",
-                  "HasStorage",
-                  "AccessControl"
-                ],
-                "isLet": true,
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CGPoint",
-                        "printedName": "CoreFoundation.CGPoint",
-                        "usr": "c:@S@CGPoint"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV8endPointSo7CGPointVvg",
-                    "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV8endPointSo7CGPointVvg",
-                    "moduleName": "Scroller2d",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Function",
-                "name": "installGroundLookup",
-                "printedName": "installGroundLookup(in:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AppSharedSceneBase",
-                    "printedName": "Scroller2d.AppSharedSceneBase",
-                    "usr": "c:@M@Scroller2d@objc(cs)AppSharedSceneBase"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV07installB6Lookup2inyAA18AppSharedSceneBaseC_tF",
-                "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV07installB6Lookup2inyAA18AppSharedSceneBaseC_tF",
-                "moduleName": "Scroller2d",
-                "declAttributes": [
-                  "AccessControl",
-                  "Custom",
-                  "RawDocComment"
-                ],
-                "funcSelfKind": "NonMutating"
-              }
-            ],
-            "declKind": "Struct",
-            "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV",
-            "mangledName": "$s10Scroller2d24GroundConstructionHelperO6ResultV",
-            "moduleName": "Scroller2d",
-            "declAttributes": [
-              "AccessControl",
-              "Custom"
-            ],
-            "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Sendable",
-                "printedName": "Sendable",
-                "usr": "s:s8SendableP",
-                "mangledName": "$ss8SendableP"
+                "implicit": true,
+                "accessorKind": "get"
               }
             ]
           },
           {
             "kind": "Function",
-            "name": "build",
-            "printedName": "build(sections:origin:texture:categoryBitMask:collisionBitMask:contactTestBitMask:collisionTopInset:)",
+            "name": "installGroundLookup",
+            "printedName": "installGroundLookup(in:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Result",
-                "printedName": "Scroller2d.GroundConstructionHelper.Result",
-                "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV"
+                "name": "Void",
+                "printedName": "()"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Scroller2d.GroundSection]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "GroundSection",
-                    "printedName": "Scroller2d.GroundSection",
-                    "usr": "s:10Scroller2d13GroundSectionV"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGPoint",
-                "printedName": "CoreFoundation.CGPoint",
-                "usr": "c:@S@CGPoint"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.String) throws -> SpriteKit.SKTexture",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SKTexture",
-                    "printedName": "SpriteKit.SKTexture",
-                    "usr": "c:objc(cs)SKTexture"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "typeAttributes": [
-                  "noescape"
-                ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt32",
-                "printedName": "Swift.UInt32",
-                "hasDefaultArg": true,
-                "usr": "s:s6UInt32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt32",
-                "printedName": "Swift.UInt32",
-                "hasDefaultArg": true,
-                "usr": "s:s6UInt32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt32",
-                "printedName": "Swift.UInt32",
-                "hasDefaultArg": true,
-                "usr": "s:s6UInt32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "hasDefaultArg": true,
-                "usr": "s:14CoreFoundation7CGFloatV"
+                "name": "AppSharedSceneBase",
+                "printedName": "Scroller2d.AppSharedSceneBase",
+                "usr": "c:@M@Scroller2d@objc(cs)AppSharedSceneBase"
               }
             ],
             "declKind": "Func",
-            "usr": "s:10Scroller2d24GroundConstructionHelperO5build8sections6origin7texture15categoryBitMask09collisionjK0011contactTestjK00L8TopInsetAC6ResultVSayAA0B7SectionVG_So7CGPointVSo9SKTextureCSSKXEs6UInt32VA2V14CoreFoundation7CGFloatVtKFZ",
-            "mangledName": "$s10Scroller2d24GroundConstructionHelperO5build8sections6origin7texture15categoryBitMask09collisionjK0011contactTestjK00L8TopInsetAC6ResultVSayAA0B7SectionVG_So7CGPointVSo9SKTextureCSSKXEs6UInt32VA2V12CoreGraphics7CGFloatVtKFZ",
+            "usr": "s:10Scroller2d20GroundCreationResultV07installB6Lookup2inyAA18AppSharedSceneBaseC_tF",
+            "mangledName": "$s10Scroller2d20GroundCreationResultV07installB6Lookup2inyAA18AppSharedSceneBaseC_tF",
             "moduleName": "Scroller2d",
-            "static": true,
             "declAttributes": [
               "Custom",
               "AccessControl",
               "RawDocComment"
             ],
-            "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Enum",
-        "usr": "s:10Scroller2d24GroundConstructionHelperO",
-        "mangledName": "$s10Scroller2d24GroundConstructionHelperO",
+        "declKind": "Struct",
+        "usr": "s:10Scroller2d20GroundCreationResultV",
+        "mangledName": "$s10Scroller2d20GroundCreationResultV",
         "moduleName": "Scroller2d",
         "declAttributes": [
           "AccessControl",
@@ -33868,6 +33557,115 @@
             "mangledName": "$ss8SendableP"
           }
         ]
+      },
+      {
+        "kind": "Function",
+        "name": "CreateGroundHelper",
+        "printedName": "CreateGroundHelper(sections:origin:texture:collisionTopInset:gapAnimationTextures:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "GroundCreationResult",
+            "printedName": "Scroller2d.GroundCreationResult",
+            "usr": "s:10Scroller2d20GroundCreationResultV"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Array",
+            "printedName": "[Scroller2d.GroundSection]",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GroundSection",
+                "printedName": "Scroller2d.GroundSection",
+                "usr": "s:10Scroller2d13GroundSectionV"
+              }
+            ],
+            "usr": "s:Sa"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "CGPoint",
+            "printedName": "CoreFoundation.CGPoint",
+            "usr": "c:@S@CGPoint"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.String) throws -> SpriteKit.SKTexture",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SKTexture",
+                "printedName": "SpriteKit.SKTexture",
+                "usr": "c:objc(cs)SKTexture"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "typeAttributes": [
+              "noescape"
+            ]
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "CGFloat",
+            "printedName": "CoreGraphics.CGFloat",
+            "hasDefaultArg": true,
+            "usr": "s:14CoreFoundation7CGFloatV"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "((Swift.String) throws -> [SpriteKit.SKTexture])?",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String) throws -> [SpriteKit.SKTexture]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[SpriteKit.SKTexture]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SKTexture",
+                        "printedName": "SpriteKit.SKTexture",
+                        "usr": "c:objc(cs)SKTexture"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "hasDefaultArg": true,
+            "usr": "s:Sq"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:10Scroller2d18CreateGroundHelper8sections6origin7texture17collisionTopInset20gapAnimationTexturesAA0C14CreationResultVSayAA0C7SectionVG_So7CGPointVSo9SKTextureCSSKXE14CoreFoundation7CGFloatVSayAPGSSKcSgtKF",
+        "mangledName": "$s10Scroller2d18CreateGroundHelper8sections6origin7texture17collisionTopInset20gapAnimationTexturesAA0C14CreationResultVSayAA0C7SectionVG_So7CGPointVSo9SKTextureCSSKXE12CoreGraphics7CGFloatVSayAPGSSKcSgtKF",
+        "moduleName": "Scroller2d",
+        "declAttributes": [
+          "AccessControl",
+          "Custom",
+          "RawDocComment"
+        ],
+        "throwing": true,
+        "funcSelfKind": "NonMutating"
       },
       {
         "kind": "Import",
@@ -34560,14 +34358,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Scroller2d.GroundConstructionHelper.Result",
-                    "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV"
+                    "name": "GroundCreationResult",
+                    "printedName": "Scroller2d.GroundCreationResult",
+                    "usr": "s:10Scroller2d20GroundCreationResultV"
                   }
                 ],
                 "declKind": "Var",
-                "usr": "s:10Scroller2d19LevelAssemblyHelperO6ResultV6groundAA018GroundConstructionD0OADVvp",
-                "mangledName": "$s10Scroller2d19LevelAssemblyHelperO6ResultV6groundAA018GroundConstructionD0OADVvp",
+                "usr": "s:10Scroller2d19LevelAssemblyHelperO6ResultV6groundAA014GroundCreationE0Vvp",
+                "mangledName": "$s10Scroller2d19LevelAssemblyHelperO6ResultV6groundAA014GroundCreationE0Vvp",
                 "moduleName": "Scroller2d",
                 "declAttributes": [
                   "Custom",
@@ -34584,14 +34382,14 @@
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Result",
-                        "printedName": "Scroller2d.GroundConstructionHelper.Result",
-                        "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV"
+                        "name": "GroundCreationResult",
+                        "printedName": "Scroller2d.GroundCreationResult",
+                        "usr": "s:10Scroller2d20GroundCreationResultV"
                       }
                     ],
                     "declKind": "Accessor",
-                    "usr": "s:10Scroller2d19LevelAssemblyHelperO6ResultV6groundAA018GroundConstructionD0OADVvg",
-                    "mangledName": "$s10Scroller2d19LevelAssemblyHelperO6ResultV6groundAA018GroundConstructionD0OADVvg",
+                    "usr": "s:10Scroller2d19LevelAssemblyHelperO6ResultV6groundAA014GroundCreationE0Vvg",
+                    "mangledName": "$s10Scroller2d19LevelAssemblyHelperO6ResultV6groundAA014GroundCreationE0Vvg",
                     "moduleName": "Scroller2d",
                     "implicit": true,
                     "accessorKind": "get"
@@ -34784,7 +34582,7 @@
           {
             "kind": "Function",
             "name": "build",
-            "printedName": "build(resources:scene:groundTexture:groundCategoryBitMask:groundCollisionBitMask:groundCollisionTopInset:target:configureObstacle:createCharacter:addContent:)",
+            "printedName": "build(resources:scene:groundTexture:groundCollisionTopInset:target:configureObstacle:createCharacter:gapAnimationTextures:addContent:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -34825,20 +34623,6 @@
                 "typeAttributes": [
                   "noescape"
                 ]
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt32",
-                "printedName": "Swift.UInt32",
-                "hasDefaultArg": true,
-                "usr": "s:s6UInt32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UInt32",
-                "printedName": "Swift.UInt32",
-                "hasDefaultArg": true,
-                "usr": "s:s6UInt32V"
               },
               {
                 "kind": "TypeNominal",
@@ -34946,9 +34730,45 @@
                 "usr": "s:Sq"
               },
               {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String) throws -> [SpriteKit.SKTexture])?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) throws -> [SpriteKit.SKTexture]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[SpriteKit.SKTexture]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SKTexture",
+                            "printedName": "SpriteKit.SKTexture",
+                            "usr": "c:objc(cs)SKTexture"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Scroller2d.LevelAssemblyHelper.Resources, SpriteKit.SKNode, Scroller2d.GroundConstructionHelper.Result) throws -> ()",
+                "printedName": "(Scroller2d.LevelAssemblyHelper.Resources, SpriteKit.SKNode, Scroller2d.GroundCreationResult) throws -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -34958,7 +34778,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(Scroller2d.LevelAssemblyHelper.Resources, SpriteKit.SKNode, Scroller2d.GroundConstructionHelper.Result)",
+                    "printedName": "(Scroller2d.LevelAssemblyHelper.Resources, SpriteKit.SKNode, Scroller2d.GroundCreationResult)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -34974,9 +34794,9 @@
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "Result",
-                        "printedName": "Scroller2d.GroundConstructionHelper.Result",
-                        "usr": "s:10Scroller2d24GroundConstructionHelperO6ResultV"
+                        "name": "GroundCreationResult",
+                        "printedName": "Scroller2d.GroundCreationResult",
+                        "usr": "s:10Scroller2d20GroundCreationResultV"
                       }
                     ]
                   }
@@ -34988,8 +34808,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10Scroller2d19LevelAssemblyHelperO5build9resources5scene13groundTexture0H15CategoryBitMask0h9CollisionkL00hM8TopInset6target17configureObstacle15createCharacter10addContentAC6ResultVAC9ResourcesV_AA18AppSharedSceneBaseCSo9SKTextureCSSKXEs6UInt32VAX14CoreFoundation7CGFloatVSo12SKSpriteNodeCSgyAA0R0VzKXEAA23SKSpriteNodeEnemy2dBaseCSgAA0tB4ItemV_AA0T0VSo6SKNodeCATtKcSgyAR_A13_AA018GroundConstructionD0OAOVtKXEtKFZ",
-            "mangledName": "$s10Scroller2d19LevelAssemblyHelperO5build9resources5scene13groundTexture0H15CategoryBitMask0h9CollisionkL00hM8TopInset6target17configureObstacle15createCharacter10addContentAC6ResultVAC9ResourcesV_AA18AppSharedSceneBaseCSo9SKTextureCSSKXEs6UInt32VAX12CoreGraphics7CGFloatVSo12SKSpriteNodeCSgyAA0R0VzKXEAA23SKSpriteNodeEnemy2dBaseCSgAA0tB4ItemV_AA0T0VSo6SKNodeCATtKcSgyAR_A13_AA018GroundConstructionD0OAOVtKXEtKFZ",
+            "usr": "s:10Scroller2d19LevelAssemblyHelperO5build9resources5scene13groundTexture0H17CollisionTopInset6target17configureObstacle15createCharacter20gapAnimationTextures10addContentAC6ResultVAC9ResourcesV_AA18AppSharedSceneBaseCSo9SKTextureCSSKXE14CoreFoundation7CGFloatVSo12SKSpriteNodeCSgyAA0O0VzKXEAA23SKSpriteNodeEnemy2dBaseCSgAA0qB4ItemV_AA0Q0VSo6SKNodeCAStKcSgSayAUGSSKcSgyAQ_A10_AA014GroundCreationW0VtKXEtKFZ",
+            "mangledName": "$s10Scroller2d19LevelAssemblyHelperO5build9resources5scene13groundTexture0H17CollisionTopInset6target17configureObstacle15createCharacter20gapAnimationTextures10addContentAC6ResultVAC9ResourcesV_AA18AppSharedSceneBaseCSo9SKTextureCSSKXE12CoreGraphics7CGFloatVSo12SKSpriteNodeCSgyAA0O0VzKXEAA23SKSpriteNodeEnemy2dBaseCSgAA0qB4ItemV_AA0Q0VSo6SKNodeCAStKcSgSayAUGSSKcSgyAQ_A10_AA014GroundCreationW0VtKXEtKFZ",
             "moduleName": "Scroller2d",
             "static": true,
             "declAttributes": [
@@ -43924,6 +43744,228 @@
                 "declKind": "Accessor",
                 "usr": "s:10Scroller2d13GroundSectionV9zPosition14CoreFoundation7CGFloatVSgvM",
                 "mangledName": "$s10Scroller2d13GroundSectionV9zPosition12CoreGraphics7CGFloatVSgvM",
+                "moduleName": "Scroller2d",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "animation",
+            "printedName": "animation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Scroller2d.AnimationProperty?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationProperty",
+                    "printedName": "Scroller2d.AnimationProperty",
+                    "usr": "s:10Scroller2d17AnimationPropertyV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Scroller2d13GroundSectionV9animationAA17AnimationPropertyVSgvp",
+            "mangledName": "$s10Scroller2d13GroundSectionV9animationAA17AnimationPropertyVSgvp",
+            "moduleName": "Scroller2d",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Scroller2d.AnimationProperty?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationProperty",
+                        "printedName": "Scroller2d.AnimationProperty",
+                        "usr": "s:10Scroller2d17AnimationPropertyV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d13GroundSectionV9animationAA17AnimationPropertyVSgvg",
+                "mangledName": "$s10Scroller2d13GroundSectionV9animationAA17AnimationPropertyVSgvg",
+                "moduleName": "Scroller2d",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Scroller2d.AnimationProperty?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationProperty",
+                        "printedName": "Scroller2d.AnimationProperty",
+                        "usr": "s:10Scroller2d17AnimationPropertyV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d13GroundSectionV9animationAA17AnimationPropertyVSgvs",
+                "mangledName": "$s10Scroller2d13GroundSectionV9animationAA17AnimationPropertyVSgvs",
+                "moduleName": "Scroller2d",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d13GroundSectionV9animationAA17AnimationPropertyVSgvM",
+                "mangledName": "$s10Scroller2d13GroundSectionV9animationAA17AnimationPropertyVSgvM",
+                "moduleName": "Scroller2d",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "collisionMasks",
+            "printedName": "collisionMasks",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Scroller2d.CollisionDetection?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CollisionDetection",
+                    "printedName": "Scroller2d.CollisionDetection",
+                    "usr": "s:10Scroller2d18CollisionDetectionV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Scroller2d13GroundSectionV14collisionMasksAA18CollisionDetectionVSgvp",
+            "mangledName": "$s10Scroller2d13GroundSectionV14collisionMasksAA18CollisionDetectionVSgvp",
+            "moduleName": "Scroller2d",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Scroller2d.CollisionDetection?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CollisionDetection",
+                        "printedName": "Scroller2d.CollisionDetection",
+                        "usr": "s:10Scroller2d18CollisionDetectionV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d13GroundSectionV14collisionMasksAA18CollisionDetectionVSgvg",
+                "mangledName": "$s10Scroller2d13GroundSectionV14collisionMasksAA18CollisionDetectionVSgvg",
+                "moduleName": "Scroller2d",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Scroller2d.CollisionDetection?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CollisionDetection",
+                        "printedName": "Scroller2d.CollisionDetection",
+                        "usr": "s:10Scroller2d18CollisionDetectionV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d13GroundSectionV14collisionMasksAA18CollisionDetectionVSgvs",
+                "mangledName": "$s10Scroller2d13GroundSectionV14collisionMasksAA18CollisionDetectionVSgvs",
+                "moduleName": "Scroller2d",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Scroller2d13GroundSectionV14collisionMasksAA18CollisionDetectionVSgvM",
+                "mangledName": "$s10Scroller2d13GroundSectionV14collisionMasksAA18CollisionDetectionVSgvM",
                 "moduleName": "Scroller2d",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -92304,14 +92346,14 @@
       "kind": "StringLiteral",
       "offset": 845,
       "length": 9,
-      "value": "\"1.30.00\""
+      "value": "\"1.31.00\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/GlobalDefinitions\/RunningProperties.swift",
       "kind": "StringLiteral",
       "offset": 892,
       "length": 9,
-      "value": "\"1.30.00\""
+      "value": "\"1.31.00\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
@@ -92533,1127 +92575,1127 @@
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12662,
+      "offset": 12684,
       "length": 16,
       "value": "\"alternateScene\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12703,
+      "offset": 12725,
       "length": 20,
       "value": "\"alternateSceneLock\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12739,
+      "offset": 12761,
       "length": 11,
       "value": "\"artifact1\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12766,
+      "offset": 12788,
       "length": 11,
       "value": "\"artifact2\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12793,
+      "offset": 12815,
       "length": 11,
       "value": "\"artifact3\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12817,
+      "offset": 12839,
       "length": 8,
       "value": "\"barrel\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12845,
+      "offset": 12867,
       "length": 15,
       "value": "\"barrelDamaged\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12874,
+      "offset": 12896,
       "length": 9,
       "value": "\"barrier\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12914,
+      "offset": 12936,
       "length": 26,
       "value": "\"blackBouncibleFlyingBomb\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12956,
+      "offset": 12978,
       "length": 11,
       "value": "\"bladePost\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 12987,
+      "offset": 13009,
       "length": 15,
       "value": "\"bombExplosion\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13020,
+      "offset": 13042,
       "length": 13,
       "value": "\"boulderDrop\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13055,
+      "offset": 13077,
       "length": 17,
       "value": "\"boulderDropStop\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13093,
+      "offset": 13115,
       "length": 16,
       "value": "\"bouncingCactus\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13132,
+      "offset": 13154,
       "length": 18,
       "value": "\"bouncingMushroom\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13178,
+      "offset": 13200,
       "length": 23,
       "value": "\"bouncingMushroomBrown\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13214,
+      "offset": 13236,
       "length": 8,
       "value": "\"bridge\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13239,
+      "offset": 13261,
       "length": 12,
       "value": "\"bucketDrop\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13272,
+      "offset": 13294,
       "length": 16,
       "value": "\"cartWithWheels\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13303,
+      "offset": 13325,
       "length": 10,
       "value": "\"caveCart\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13330,
+      "offset": 13352,
       "length": 12,
       "value": "\"checkpoint\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13353,
+      "offset": 13375,
       "length": 6,
       "value": "\"coin\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13374,
+      "offset": 13396,
       "length": 10,
       "value": "\"conveyor\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13407,
+      "offset": 13429,
       "length": 18,
       "value": "\"conveyorPlatform\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13444,
+      "offset": 13466,
       "length": 14,
       "value": "\"crateDamaged\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13476,
+      "offset": 13498,
       "length": 13,
       "value": "\"darknessEnd\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13511,
+      "offset": 13533,
       "length": 17,
       "value": "\"darknessLighted\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13548,
+      "offset": 13570,
       "length": 15,
       "value": "\"darknessStart\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13579,
+      "offset": 13601,
       "length": 11,
       "value": "\"dropBlock\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13615,
+      "offset": 13637,
       "length": 20,
       "value": "\"dropRotatingObject\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13652,
+      "offset": 13674,
       "length": 12,
       "value": "\"enemyArrow\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13684,
+      "offset": 13706,
       "length": 15,
       "value": "\"enemyFireball\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13719,
+      "offset": 13741,
       "length": 15,
       "value": "\"enemyOneSlash\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13752,
+      "offset": 13774,
       "length": 13,
       "value": "\"fallingBomb\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13789,
+      "offset": 13811,
       "length": 19,
       "value": "\"fallingChandelier\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13826,
+      "offset": 13848,
       "length": 13,
       "value": "\"fallingDrip\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13862,
+      "offset": 13884,
       "length": 18,
       "value": "\"fallingStoneTrap\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13907,
+      "offset": 13929,
       "length": 22,
       "value": "\"floatingAttackWeapon\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13948,
+      "offset": 13970,
       "length": 14,
       "value": "\"floatingBomb\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 13989,
+      "offset": 14011,
       "length": 22,
       "value": "\"floatIslandDisappear\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14034,
+      "offset": 14056,
       "length": 18,
       "value": "\"floorAboveGround\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14074,
+      "offset": 14096,
       "length": 17,
       "value": "\"floorSubstitute\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14110,
+      "offset": 14132,
       "length": 14,
       "value": "\"healthBanana\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14140,
+      "offset": 14162,
       "length": 11,
       "value": "\"heroArrow\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14170,
+      "offset": 14192,
       "length": 14,
       "value": "\"heroFireball\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14202,
+      "offset": 14224,
       "length": 13,
       "value": "\"hideOnTouch\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14232,
+      "offset": 14254,
       "length": 12,
       "value": "\"hollowTree\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14263,
+      "offset": 14285,
       "length": 14,
       "value": "\"keepAwayKing\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14300,
+      "offset": 14322,
       "length": 18,
       "value": "\"killingBladePost\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14343,
+      "offset": 14365,
       "length": 20,
       "value": "\"killingContraption\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14375,
+      "offset": 14397,
       "length": 7,
       "value": "\"lever\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14395,
+      "offset": 14417,
       "length": 8,
       "value": "\"mirage\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14425,
+      "offset": 14447,
       "length": 17,
       "value": "\"mirageLightBeam\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14463,
+      "offset": 14485,
       "length": 16,
       "value": "\"movingPlatform\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14490,
+      "offset": 14512,
       "length": 6,
       "value": "\"none\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14516,
+      "offset": 14538,
       "length": 15,
       "value": "\"parachuteBomb\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14551,
+      "offset": 14573,
       "length": 15,
       "value": "\"pendulumSwing\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14585,
+      "offset": 14607,
       "length": 14,
       "value": "\"puzzlePiece1\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14618,
+      "offset": 14640,
       "length": 14,
       "value": "\"puzzlePiece2\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14651,
+      "offset": 14673,
       "length": 14,
       "value": "\"puzzlePiece3\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14694,
+      "offset": 14716,
       "length": 24,
       "value": "\"redBouncibleFlyingBomb\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14729,
+      "offset": 14751,
       "length": 6,
       "value": "\"rope\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14755,
+      "offset": 14777,
       "length": 15,
       "value": "\"rotatingBlade\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14789,
+      "offset": 14811,
       "length": 14,
       "value": "\"ropePlatform\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14816,
+      "offset": 14838,
       "length": 8,
       "value": "\"shield\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14842,
+      "offset": 14864,
       "length": 13,
       "value": "\"shieldTimed\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14877,
+      "offset": 14899,
       "length": 17,
       "value": "\"shopEncountered\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14912,
+      "offset": 14934,
       "length": 13,
       "value": "\"shopEntered\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 14951,
+      "offset": 14973,
       "length": 21,
       "value": "\"springboardMushroom\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15001,
+      "offset": 15023,
       "length": 24,
       "value": "\"springboardMushroomRed\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15042,
+      "offset": 15064,
       "length": 12,
       "value": "\"stoneSpike\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15074,
+      "offset": 15096,
       "length": 15,
       "value": "\"swingingBlade\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15105,
+      "offset": 15127,
       "length": 11,
       "value": "\"tntBarrel\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15130,
+      "offset": 15152,
       "length": 9,
       "value": "\"tornado\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15154,
+      "offset": 15176,
       "length": 10,
       "value": "\"trapDoor\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15189,
+      "offset": 15211,
       "length": 20,
       "value": "\"tutorialGroundSlam\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15228,
+      "offset": 15250,
       "length": 14,
       "value": "\"tutorialJump\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15265,
+      "offset": 15287,
       "length": 18,
       "value": "\"tutorialRopeJump\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15303,
+      "offset": 15325,
       "length": 15,
       "value": "\"tutorialSlash\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15340,
+      "offset": 15362,
       "length": 17,
       "value": "\"tutorialTouched\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 15378,
+      "offset": 15400,
       "length": 16,
       "value": "\"winchOscillate\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16198,
+      "offset": 16220,
       "length": 5,
       "value": "\"all\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16214,
+      "offset": 16236,
       "length": 6,
       "value": "\"both\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16240,
+      "offset": 16262,
       "length": 15,
       "value": "\"bothStartLeft\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16276,
+      "offset": 16298,
       "length": 16,
       "value": "\"bothStartRight\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16305,
+      "offset": 16327,
       "length": 8,
       "value": "\"bottom\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16324,
+      "offset": 16346,
       "length": 6,
       "value": "\"down\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16345,
+      "offset": 16367,
       "length": 10,
       "value": "\"downLeft\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16371,
+      "offset": 16393,
       "length": 11,
       "value": "\"downRight\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16398,
+      "offset": 16420,
       "length": 11,
       "value": "\"downSwipe\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16420,
+      "offset": 16442,
       "length": 6,
       "value": "\"jump\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16437,
+      "offset": 16459,
       "length": 6,
       "value": "\"left\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16454,
+      "offset": 16476,
       "length": 6,
       "value": "\"none\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16472,
+      "offset": 16494,
       "length": 7,
       "value": "\"reset\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16491,
+      "offset": 16513,
       "length": 7,
       "value": "\"right\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16508,
+      "offset": 16530,
       "length": 5,
       "value": "\"top\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16522,
+      "offset": 16544,
       "length": 4,
       "value": "\"up\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16539,
+      "offset": 16561,
       "length": 8,
       "value": "\"upDown\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16560,
+      "offset": 16582,
       "length": 8,
       "value": "\"upLeft\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16582,
+      "offset": 16604,
       "length": 9,
       "value": "\"upRight\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 16605,
+      "offset": 16627,
       "length": 9,
       "value": "\"upSwipe\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 20466,
+      "offset": 20488,
       "length": 7,
       "value": "\"alien\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 20485,
+      "offset": 20507,
       "length": 7,
       "value": "\"enemy\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 20507,
+      "offset": 20529,
       "length": 10,
       "value": "\"friendly\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 20529,
+      "offset": 20551,
       "length": 7,
       "value": "\"ghost\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 20547,
+      "offset": 20569,
       "length": 6,
       "value": "\"none\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 20874,
+      "offset": 20896,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 20901,
+      "offset": 20923,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 20931,
+      "offset": 20953,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 20961,
+      "offset": 20983,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 20993,
+      "offset": 21015,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21010,
+      "offset": 21032,
       "length": 2,
       "value": "32"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21026,
+      "offset": 21048,
       "length": 2,
       "value": "64"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21064,
+      "offset": 21086,
       "length": 3,
       "value": "128"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21094,
+      "offset": 21116,
       "length": 3,
       "value": "256"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21125,
+      "offset": 21147,
       "length": 3,
       "value": "512"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21148,
+      "offset": 21170,
       "length": 4,
       "value": "1024"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21178,
+      "offset": 21200,
       "length": 4,
       "value": "2048"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21211,
+      "offset": 21233,
       "length": 4,
       "value": "4096"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21235,
+      "offset": 21257,
       "length": 4,
       "value": "8192"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21276,
+      "offset": 21298,
       "length": 5,
       "value": "16384"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21304,
+      "offset": 21326,
       "length": 5,
       "value": "32768"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21333,
+      "offset": 21355,
       "length": 5,
       "value": "65536"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21364,
+      "offset": 21386,
       "length": 6,
       "value": "131072"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "IntegerLiteral",
-      "offset": 21421,
+      "offset": 21443,
       "length": 6,
       "value": "262144"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 21785,
+      "offset": 21807,
       "length": 13,
       "value": "\"humanPlayer\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 21821,
+      "offset": 21843,
       "length": 18,
       "value": "\"staticObjectBody\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 21865,
+      "offset": 21887,
       "length": 21,
       "value": "\"staticObjectTouched\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 21912,
+      "offset": 21934,
       "length": 21,
       "value": "\"staticObjectMovable\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 21961,
+      "offset": 21983,
       "length": 23,
       "value": "\"staticObjectBouncible\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 21996,
+      "offset": 22018,
       "length": 7,
       "value": "\"floor\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22014,
+      "offset": 22036,
       "length": 6,
       "value": "\"none\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22053,
+      "offset": 22075,
       "length": 28,
       "value": "\"objectCausesDamageAllSides\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22105,
+      "offset": 22127,
       "length": 19,
       "value": "\"objectCausesDeath\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22149,
+      "offset": 22171,
       "length": 20,
       "value": "\"collectibleTouched\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22186,
+      "offset": 22208,
       "length": 12,
       "value": "\"enemyTouch\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22221,
+      "offset": 22243,
       "length": 18,
       "value": "\"projectileThrown\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22265,
+      "offset": 22287,
       "length": 21,
       "value": "\"surroundingsContact\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22303,
+      "offset": 22325,
       "length": 12,
       "value": "\"objectRope\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22349,
+      "offset": 22371,
       "length": 29,
       "value": "\"staticObjectSpecialHandling\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22398,
+      "offset": 22420,
       "length": 15,
       "value": "\"floatingFloor\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22434,
+      "offset": 22456,
       "length": 16,
       "value": "\"objectToObject\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22473,
+      "offset": 22495,
       "length": 18,
       "value": "\"floorAboveGround\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 22539,
+      "offset": 22561,
       "length": 43,
       "value": "\"objectCausesDamageAllSidesIgnoreCollision\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 23363,
+      "offset": 23385,
       "length": 8,
       "value": "\"custom\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 23398,
+      "offset": 23420,
       "length": 22,
       "value": "\"foreverAutomatically\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 23445,
+      "offset": 23467,
       "length": 20,
       "value": "\"foreverResetManual\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 23477,
+      "offset": 23499,
       "length": 7,
       "value": "\"never\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 23495,
+      "offset": 23517,
       "length": 6,
       "value": "\"none\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 23512,
+      "offset": 23534,
       "length": 6,
       "value": "\"once\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27263,
+      "offset": 27285,
       "length": 11,
       "value": "\"Obstacles\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27290,
+      "offset": 27312,
       "length": 11,
       "value": "\"Character\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27318,
+      "offset": 27340,
       "length": 13,
       "value": "\"Checkpoints\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27342,
+      "offset": 27364,
       "length": 7,
       "value": "\"Coins\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27362,
+      "offset": 27384,
       "length": 9,
       "value": "\"Shields\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27386,
+      "offset": 27408,
       "length": 11,
       "value": "\"Artifacts\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27410,
+      "offset": 27432,
       "length": 8,
       "value": "\"Ground\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27435,
+      "offset": 27457,
       "length": 12,
       "value": "\"Background\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27462,
+      "offset": 27484,
       "length": 11,
       "value": "\"Level End\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27488,
+      "offset": 27510,
       "length": 11,
       "value": "\"Phase End\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Globals\/enums.swift",
       "kind": "StringLiteral",
-      "offset": 27510,
+      "offset": 27532,
       "length": 6,
       "value": "\"None\""
     },
@@ -93700,23 +93742,9 @@
       "value": "2"
     },
     {
-      "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Helpers\/GroundConstructionHelper.swift",
+      "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Helpers\/GroundCreationHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 2102,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Helpers\/GroundConstructionHelper.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2189,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Helpers\/GroundConstructionHelper.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2229,
+      "offset": 1707,
       "length": 1,
       "value": "0"
     },
@@ -93751,14 +93779,7 @@
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Helpers\/LevelAssemblyHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 4718,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Helpers\/LevelAssemblyHelper.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4817,
+      "offset": 4670,
       "length": 1,
       "value": "0"
     },
@@ -93786,245 +93807,245 @@
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "FloatLiteral",
-      "offset": 14227,
+      "offset": 14946,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "BooleanLiteral",
-      "offset": 14259,
+      "offset": 14978,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 14932,
+      "offset": 15651,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 15046,
+      "offset": 15765,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 15465,
+      "offset": 16184,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "FloatLiteral",
-      "offset": 15570,
+      "offset": 16289,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "BooleanLiteral",
-      "offset": 15702,
+      "offset": 16421,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 16688,
+      "offset": 17407,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 16772,
+      "offset": 17491,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "IntegerLiteral",
-      "offset": 16870,
+      "offset": 17589,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 29837,
+      "offset": 30556,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 29921,
+      "offset": 30640,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "IntegerLiteral",
-      "offset": 31050,
+      "offset": 31769,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 51205,
+      "offset": 51924,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 51316,
+      "offset": 52035,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 52959,
+      "offset": 53678,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "Array",
-      "offset": 53120,
+      "offset": 53839,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 54422,
+      "offset": 55141,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "IntegerLiteral",
-      "offset": 54835,
+      "offset": 55554,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "IntegerLiteral",
-      "offset": 55612,
+      "offset": 56331,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 56259,
+      "offset": 56978,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 57037,
+      "offset": 57756,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "Array",
-      "offset": 57797,
+      "offset": 58516,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "Array",
-      "offset": 57836,
+      "offset": 58555,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "IntegerLiteral",
-      "offset": 59928,
+      "offset": 60647,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 62544,
+      "offset": 63263,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "IntegerLiteral",
-      "offset": 63092,
+      "offset": 63811,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 64196,
+      "offset": 64915,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "StringLiteral",
-      "offset": 64295,
+      "offset": 65014,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "Array",
-      "offset": 72981,
+      "offset": 73700,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "Array",
-      "offset": 73014,
+      "offset": 73733,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "Array",
-      "offset": 75618,
+      "offset": 76337,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "Array",
-      "offset": 75684,
+      "offset": 76403,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "IntegerLiteral",
-      "offset": 81831,
+      "offset": 82550,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Structs\/ObjectStructs.swift",
       "kind": "IntegerLiteral",
-      "offset": 81930,
+      "offset": 82649,
       "length": 1,
       "value": "0"
     }

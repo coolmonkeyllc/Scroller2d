@@ -512,14 +512,9 @@ public enum fieldList : Swift::String, Swift::CaseIterable, Swift::Codable, Scro
   }
 }
 public enum groundBaseType : Swift::String, Swift::CaseIterable, Swift::Codable, Scroller2d::EnumListProvider {
-  case BrightWater
+  case Gap
   case Ground
-  case Lava
-  case MuddyWater
   case None
-  case Spike
-  case ToxicGreen
-  case Water
   public static var typeName: Swift::String {
     get
   }
@@ -1121,16 +1116,14 @@ public enum LevelAssemblyError : Swift::Error, Foundation::LocalizedError {
     get
   }
 }
-@_Concurrency::MainActor public enum GroundConstructionHelper {
-  @_Concurrency::MainActor public struct Result {
-    @_Concurrency::MainActor public let root: SpriteKit::SKNode
-    @_Concurrency::MainActor public let surfaces: [CoreFoundation::CGRect]
-    @_Concurrency::MainActor public let bounds: CoreFoundation::CGRect
-    @_Concurrency::MainActor public let endPoint: CoreFoundation::CGPoint
-    @_Concurrency::MainActor public func installGroundLookup(in scene: Scroller2d::AppSharedSceneBase)
-  }
-  @_Concurrency::MainActor public static func build(sections: [Scroller2d::GroundSection], origin: CoreFoundation::CGPoint, texture: (Swift::String) throws -> SpriteKit::SKTexture, categoryBitMask: Swift::UInt32 = 1, collisionBitMask: Swift::UInt32 = UInt32.max, contactTestBitMask: Swift::UInt32 = 0, collisionTopInset: CoreFoundation::CGFloat = 0) throws -> Scroller2d::GroundConstructionHelper.Scroller2d::Result
+@_Concurrency::MainActor public struct GroundCreationResult {
+  @_Concurrency::MainActor public let root: SpriteKit::SKNode
+  @_Concurrency::MainActor public let surfaces: [CoreFoundation::CGRect]
+  @_Concurrency::MainActor public let bounds: CoreFoundation::CGRect
+  @_Concurrency::MainActor public let endPoint: CoreFoundation::CGPoint
+  @_Concurrency::MainActor public func installGroundLookup(in scene: Scroller2d::AppSharedSceneBase)
 }
+@_Concurrency::MainActor public func CreateGroundHelper(sections: [Scroller2d::GroundSection], origin: CoreFoundation::CGPoint, texture: (Swift::String) throws -> SpriteKit::SKTexture, collisionTopInset: CoreFoundation::CGFloat = 0, gapAnimationTextures: ((Swift::String) throws -> [SpriteKit::SKTexture])? = nil) throws -> Scroller2d::GroundCreationResult
 @_Concurrency::MainActor public enum LevelAssemblyHelper {
   @_Concurrency::MainActor public struct Resources {
     @_Concurrency::MainActor public let level: Scroller2d::Level
@@ -1147,12 +1140,12 @@ public enum LevelAssemblyError : Swift::Error, Foundation::LocalizedError {
     @_Concurrency::MainActor public let sceneSize: CoreFoundation::CGSize
     @_Concurrency::MainActor public let anchorPoint: CoreFoundation::CGPoint
     @_Concurrency::MainActor public let scaleMode: SpriteKit::SKSceneScaleMode
-    @_Concurrency::MainActor public let ground: Scroller2d::GroundConstructionHelper.Scroller2d::Result
+    @_Concurrency::MainActor public let ground: Scroller2d::GroundCreationResult
     @_Concurrency::MainActor public let obstacles: [Scroller2d::SKSpriteNode2dBase]
     @_Concurrency::MainActor public let characters: [Scroller2d::SKSpriteNodeEnemy2dBase]
     @_Concurrency::MainActor public func install(in scene: Scroller2d::AppSharedSceneBase)
   }
-  @_Concurrency::MainActor public static func build(resources: Scroller2d::LevelAssemblyHelper.Scroller2d::Resources, scene: Scroller2d::AppSharedSceneBase, groundTexture: (Swift::String) throws -> SpriteKit::SKTexture, groundCategoryBitMask: Swift::UInt32 = 1, groundCollisionBitMask: Swift::UInt32 = UInt32.max, groundCollisionTopInset: CoreFoundation::CGFloat = 0, target: SpriteKit::SKSpriteNode? = nil, configureObstacle: (inout Scroller2d::Obstacle) throws -> Swift::Void = { _ in }, createCharacter: ((Scroller2d::CharacterLevelItem, Scroller2d::Character, SpriteKit::SKNode, Scroller2d::AppSharedSceneBase) throws -> Scroller2d::SKSpriteNodeEnemy2dBase?)? = nil, addContent: (Scroller2d::LevelAssemblyHelper.Scroller2d::Resources, SpriteKit::SKNode, Scroller2d::GroundConstructionHelper.Scroller2d::Result) throws -> Swift::Void = { _, _, _ in }) throws -> Scroller2d::LevelAssemblyHelper.Scroller2d::Result
+  @_Concurrency::MainActor public static func build(resources: Scroller2d::LevelAssemblyHelper.Scroller2d::Resources, scene: Scroller2d::AppSharedSceneBase, groundTexture: (Swift::String) throws -> SpriteKit::SKTexture, groundCollisionTopInset: CoreFoundation::CGFloat = 0, target: SpriteKit::SKSpriteNode? = nil, configureObstacle: (inout Scroller2d::Obstacle) throws -> Swift::Void = { _ in }, createCharacter: ((Scroller2d::CharacterLevelItem, Scroller2d::Character, SpriteKit::SKNode, Scroller2d::AppSharedSceneBase) throws -> Scroller2d::SKSpriteNodeEnemy2dBase?)? = nil, gapAnimationTextures: ((Swift::String) throws -> [SpriteKit::SKTexture])? = nil, addContent: (Scroller2d::LevelAssemblyHelper.Scroller2d::Resources, SpriteKit::SKNode, Scroller2d::GroundCreationResult) throws -> Swift::Void = { _, _, _ in }) throws -> Scroller2d::LevelAssemblyHelper.Scroller2d::Result
 }
 @_Concurrency::MainActor public func CreateObstacleHelper(ld: Scroller2d::Obstacle, node: SpriteKit::SKNode, scene: Scroller2d::AppSharedSceneBase) -> Scroller2d::SKSpriteNode2dBase
 @_Concurrency::MainActor public func CreateCharacterHelper(levelItem: Scroller2d::CharacterLevelItem, element: Scroller2d::Character, target: SpriteKit::SKSpriteNode?, node: SpriteKit::SKNode, scene: Scroller2d::AppSharedSceneBase) -> Scroller2d::SKSpriteNodeEnemy2dBase
@@ -1302,6 +1295,8 @@ public struct GroundSection : Swift::Codable, Scroller2d::Reflectable {
   public var stack: Swift::Bool?
   public var anchorPoint: Swift::String?
   public var zPosition: CoreFoundation::CGFloat?
+  public var animation: Scroller2d::AnimationProperty?
+  public var collisionMasks: Scroller2d::CollisionDetection?
   public var devices: [Scroller2d::DeviceProperties]?
   public var extraProperties: [Scroller2d::ExtraProperties]?
   public func encode(to encoder: any Swift::Encoder) throws
@@ -1961,8 +1956,7 @@ extension Scroller2d::callbackType : Swift::Equatable {}
 extension Scroller2d::callbackType : Swift::Hashable {}
 extension Scroller2d::callbackType : Swift::RawRepresentable {}
 extension Scroller2d::CameraFollowHelper : Swift::Sendable {}
-extension Scroller2d::GroundConstructionHelper : Swift::Sendable {}
-extension Scroller2d::GroundConstructionHelper.Scroller2d::Result : Swift::Sendable {}
+extension Scroller2d::GroundCreationResult : Swift::Sendable {}
 extension Scroller2d::LevelAssemblyHelper : Swift::Sendable {}
 extension Scroller2d::LevelAssemblyHelper.Scroller2d::Resources : Swift::Sendable {}
 extension Scroller2d::LevelAssemblyHelper.Scroller2d::Result : Swift::Sendable {}

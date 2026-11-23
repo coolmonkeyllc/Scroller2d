@@ -42,44 +42,6 @@
 	</dict>
 	<dict>
 		<key>elementName</key>
-		<string>mesa_ridges</string>
-		<key>sceneObjectType</key>
-		<string>background</string>
-		<key>image</key>
-		<string>mesa_ridges</string>
-		<key>devices</key>
-		<array>
-			<dict>
-				<key>deviceName</key>
-				<string>defaultDevice</string>
-				<key>size</key>
-				<string>{874,402}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>elementName</key>
-		<string>cactus_ridges</string>
-		<key>sceneObjectType</key>
-		<string>background</string>
-		<key>image</key>
-		<string>cactus_ridges</string>
-		<key>devices</key>
-		<array>
-			<dict>
-				<key>deviceName</key>
-				<string>defaultDevice</string>
-				<key>size</key>
-				<string>{874,402}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>elementName</key>
 		<string>sandstone</string>
 		<key>sceneObjectType</key>
 		<string>ground</string>
@@ -175,52 +137,6 @@
 		<false/>
 		<key>isDynamic</key>
 		<false/>
-	</dict>
-	<dict>
-		<key>elementName</key>
-		<string>sun_relic</string>
-		<key>sceneObjectType</key>
-		<string>artifact</string>
-		<key>image</key>
-		<string>sun_relic</string>
-		<key>devices</key>
-		<array>
-			<dict>
-				<key>deviceName</key>
-				<string>defaultDevice</string>
-				<key>size</key>
-				<string>{44,49}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-			</dict>
-		</array>
-		<key>useGravity</key>
-		<false/>
-		<key>isDynamic</key>
-		<false/>
-	</dict>
-	<dict>
-		<key>elementName</key>
-		<string>desertruins_beacon</string>
-		<key>sceneObjectType</key>
-		<string>checkpoint</string>
-		<key>image</key>
-		<string>desertruins_beacon</string>
-		<key>useGravity</key>
-		<true/>
-		<key>isDynamic</key>
-		<false/>
-		<key>devices</key>
-		<array>
-			<dict>
-				<key>deviceName</key>
-				<string>defaultDevice</string>
-				<key>size</key>
-				<string>{56,82}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-			</dict>
-		</array>
 	</dict>
 </array>
 </plist>

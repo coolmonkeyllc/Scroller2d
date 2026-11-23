@@ -1,40 +1,26 @@
-# Desert Ruins
+# Desert Ruins Starter
 
-Desert Ruins is a horizontal 874 × 402 landscape sample for Scroller2d LevelEditor. The explorer starts beside a flowering cactus, passes a supply crate and checkpoint beacon, jumps a 120-point gap along a coin trail, and reaches a saw, guardian, spikes, and a relic gate.
+A small, offline-ready workspace for learning Scroller2d LevelEditor. This is an editable level, not an executable iOS demo.
 
-## Open the level
+## Open and edit
 
-1. In LevelEditor, choose **File → Open Workspace…** and select the **Desert Ruins Workspace** folder.
-2. Choose **File → Open Level…** and open **Levels/DesertRuins.plist**.
-3. Pan right with the canvas navigation controls to see the saw, guardian, and relic gate.
+1. Copy this entire folder to a writable location such as Documents before editing, especially when distributed inside an app bundle.
+2. In LevelEditor, choose **File → Open Workspace…** and select the copied **Desert Ruins Starter Workspace** folder.
+3. Choose **File → Open Level…** and select **Levels/DesertRuinsStarter.plist**.
+4. Select the cactus or coin, move it on the canvas, and save the level.
 
-Keep the workspace folder together when moving or sharing it. Its file layout follows the editor's bundled Sample Workspace.
+The landscape canvas is 874 × 402. The explorer and cactus sit on a continuous sandstone platform, with a coin to the right. The sky and far ridges demonstrate layered backgrounds.
 
-## Assets
+## Free editor limits
 
-- **Assets/Images/Backgrounds** contains an opaque sky and three transparent ridge layers with separate scroll speeds.
-- **Assets/Images/Ground** contains repeating sandstone, left and right edge tiles, and the transparent gap tile.
-- **Assets/Images/Obstacles** contains a cactus, crate, spikes, gate, and the eight-frame `watch_saw` sequence.
-- **Assets/Images/Checkpoints** contains the three-frame checkpoint beacon. The checkpoint sits 49 scene points before the first gap.
-- **Assets/Images/Coins** and **Artifacts** contain the Sundrop coin and Sun Relic.
-- **Assets/Images/Characters** contains four sequences each for `dune_explorer` and `ruin_guardian`. All character frames use a 128 × 96 transparent canvas. Frame filenames start at `_00` and are in playback order.
-- **Assets/Sounds** contains the 20-second `desertruins_theme.wav` loop, `blade_slash.wav`, `stone_hit.wav`, and `checkpoint_chime.wav`. The theme is referenced by the level background and the effects by the relevant object properties.
+The starter contains **2 backgrounds, 3 ground sections, 1 obstacle, 1 character, and 1 coin**. The middle ground section repeats its tile seven times; it is one configured ground section. Each category starts below the five-object free save limit, leaving room to experiment. Adding objects beyond the free limits requires a paid editor license.
 
-| Character sequence suffix | Frames | Suggested timing |
-|---|---:|---|
-| `Idle` | 6 | 0.17 s per frame, loop |
-| `Running` | 8 | 0.08 s per frame, loop |
-| `Jumping` | 6 | 0.09 s per frame, once |
-| `Slash` | 6 | 0.07 s per frame, once |
+## Included resources
 
-The editor canvas displays the placed assets. The sibling iOS sample provides player input, switches character states (including Jumping), plays sounds in response to game events, and demonstrates collision and scrolling behavior. For the checkpoint demo, activate the beacon, miss the jump, and respawn at the beacon.
+Only the starter's sky, ridge, sandstone tiles, cactus, coin, explorer animation sequences, and two character sound effects are included. The catalogs contain only starter objects. No API key, runtime framework, Xcode project, or personal Xcode settings are included. The editor database contains workspace defaults and no saved document paths.
 
-## Level End
+Character movement, jumping, attacks, collection, and gameplay require a SpriteKit project and game logic; placing objects on the editor canvas does not implement those rules. For complete API integration examples, download Desert Ruins or Skypirates at https://scroller2d.com/Download. Each complete demo includes a compatible API.
 
-The Level End section defines the results panel shown after the player takes the Sun Relic in the iOS demo. It includes a title, description, coin and relic totals, elapsed time, a replay item, and the synthesized `level_complete.wav` sound in `Assets/Sounds`.
+## Artwork
 
-## Reuse
-
-The sample began with procedural artwork and synthesized audio. Its visuals were later refined with AI assistance toward rounded, outlined cartoon sprites. See [ARTWORK.md](../Desert%20Ruins%20iOS%20Demo/ARTWORK.md) for the current inventory, provenance notes, and asset workflow. The explorer is an original adventure character.
-
-The art and audio in this workspace may be copied, edited, used commercially, and redistributed without attribution. To the extent any rights in those assets are held by the creator of this package, they are waived to the extent permitted by law. This applies to the supplied art and audio. Scroller2d software and API license terms are separate.
+These assets are a subset of the Desert Ruins artwork. See **ARTWORK.md** for provenance and reuse information; its full-demo inventory also describes assets not included in this starter.
