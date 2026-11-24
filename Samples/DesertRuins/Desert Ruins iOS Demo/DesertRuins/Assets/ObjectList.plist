@@ -155,6 +155,56 @@
 	</dict>
 	<dict>
 		<key>elementName</key>
+		<string>sandstone_ramp</string>
+		<key>sceneObjectType</key>
+		<string>ground</string>
+		<key>image</key>
+		<string>sandstone_ramp</string>
+		<key>devices</key>
+		<array>
+			<dict>
+				<key>deviceName</key>
+				<string>defaultDevice</string>
+				<key>size</key>
+				<string>{192,104}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+			</dict>
+		</array>
+		<key>groundType</key>
+		<string>Ground</string>
+		<key>useGravity</key>
+		<false/>
+		<key>isDynamic</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>elementName</key>
+		<string>sandstone_foundation</string>
+		<key>sceneObjectType</key>
+		<string>ground</string>
+		<key>image</key>
+		<string>sandstone_foundation</string>
+		<key>devices</key>
+		<array>
+			<dict>
+				<key>deviceName</key>
+				<string>defaultDevice</string>
+				<key>size</key>
+				<string>{96,40}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+			</dict>
+		</array>
+		<key>groundType</key>
+		<string>Ground</string>
+		<key>useGravity</key>
+		<false/>
+		<key>isDynamic</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>elementName</key>
 		<string>sundrop_coin</string>
 		<key>sceneObjectType</key>
 		<string>coin</string>

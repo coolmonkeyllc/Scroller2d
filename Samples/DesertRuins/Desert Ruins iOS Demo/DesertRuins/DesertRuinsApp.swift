@@ -14,7 +14,8 @@ final class DesertRuinsWindowScene: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
 
-		print("Scroller2d Api Library Version: \(LibraryVersion.getVersion())")
+		let build = String(format: "%04d", LibraryVersion.getBuildNumber())
+		print("Scroller2d Api Library Version: \(LibraryVersion.getVersion()) (build \(build))")
 		print("Scroller2d Api Schema Version: \(LibraryVersion.getSchemaVersion())")
 
 		let window = UIWindow(windowScene: windowScene)

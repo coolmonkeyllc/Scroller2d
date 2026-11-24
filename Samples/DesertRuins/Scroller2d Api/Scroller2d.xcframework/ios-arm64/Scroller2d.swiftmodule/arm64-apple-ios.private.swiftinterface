@@ -48,6 +48,8 @@ public protocol SceneBaseContactDelegate : AnyObject {
   @_Concurrency::MainActor @preconcurrency public func retrieveTexture(atlasName: Swift::String) -> [SpriteKit::SKTexture]
   @_Concurrency::MainActor @preconcurrency public func preloadCache(atlasName: Swift::String)
   @_Concurrency::MainActor @preconcurrency public func dispenseCache()
+  @_Concurrency::MainActor @preconcurrency public func groundSurfaceY(at x: CoreFoundation::CGFloat) -> CoreFoundation::CGFloat?
+  @available(*, deprecated, message: "Use groundSurfaceY(at:) and handle nil when no surface exists.")
   @_Concurrency::MainActor @preconcurrency public func determineGroundBaseY(x: CoreFoundation::CGFloat) -> CoreFoundation::CGFloat
   @_Concurrency::MainActor @preconcurrency @objc override dynamic public init(size: CoreFoundation::CGSize)
   @_Concurrency::MainActor @preconcurrency @objc override dynamic public init()
@@ -279,6 +281,7 @@ extension UIKit::UIColor {
 @_hasMissingDesignatedInitializers public class LibraryVersion {
   public static func getVersion() -> Swift::String
   public static func getSchemaVersion() -> Swift::String
+  public static func getBuildNumber() -> Swift::Int
   @objc deinit
 }
 public protocol EnumListProvider {

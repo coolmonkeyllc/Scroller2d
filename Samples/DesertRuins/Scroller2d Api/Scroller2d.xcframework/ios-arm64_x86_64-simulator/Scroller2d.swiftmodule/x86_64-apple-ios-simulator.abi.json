@@ -1504,6 +1504,44 @@
           },
           {
             "kind": "Function",
+            "name": "groundSurfaceY",
+            "printedName": "groundSurfaceY(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Scroller2d18AppSharedSceneBaseC14groundSurfaceY2at14CoreFoundation7CGFloatVSgAH_tF",
+            "mangledName": "$s10Scroller2d18AppSharedSceneBaseC14groundSurfaceY2at12CoreGraphics7CGFloatVSgAH_tF",
+            "moduleName": "Scroller2d",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "determineGroundBaseY",
             "printedName": "determineGroundBaseY(x:)",
             "children": [
@@ -1524,10 +1562,12 @@
             "usr": "s:10Scroller2d18AppSharedSceneBaseC015determineGroundE1Y1x14CoreFoundation7CGFloatVAH_tF",
             "mangledName": "$s10Scroller2d18AppSharedSceneBaseC015determineGroundE1Y1x12CoreGraphics7CGFloatVAH_tF",
             "moduleName": "Scroller2d",
+            "deprecated": true,
             "declAttributes": [
               "Preconcurrency",
               "Custom",
               "AccessControl",
+              "Available",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -8839,6 +8879,30 @@
             "declAttributes": [
               "Final",
               "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getBuildNumber",
+            "printedName": "getBuildNumber()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Scroller2d14LibraryVersionC14getBuildNumberSiyFZ",
+            "mangledName": "$s10Scroller2d14LibraryVersionC14getBuildNumberSiyFZ",
+            "moduleName": "Scroller2d",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -93261,6 +93325,13 @@
       "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/Extensions\/StringExtensions.swift",
       "kind": "IntegerLiteral",
       "offset": 6515,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/toddlupiani\/Projects\/Scroller2d\/scroller2d\/Scroller2d\/Scroller2d\/GlobalDefinitions\/LibraryBuildNumber.swift",
+      "kind": "IntegerLiteral",
+      "offset": 141,
       "length": 1,
       "value": "1"
     },

@@ -64,6 +64,7 @@ final class GameScene: AppSharedSceneBase {
     private var held: [ObjectIdentifier: Control] = [:]
     private var backdrop: [BackgroundLayer] = []
     private var surfaces: [CGRect] = []
+    private var solidObstacleSurfaces: [CGRect] = []
     private var endX: CGFloat = 0
     private var player: SKSpriteNode!
     private var guardian: SKSpriteNodeEnemy2dBase?
@@ -138,6 +139,7 @@ final class GameScene: AppSharedSceneBase {
         for layer in backdrop { layer.tiles.forEach { $0.removeFromParent() } }
         backdrop.removeAll()
         surfaces.removeAll()
+        solidObstacleSurfaces.removeAll()
         held.removeAll()
         keys.removeAll()
         pose = nil
@@ -233,7 +235,7 @@ final class GameScene: AppSharedSceneBase {
                 body.friction = 0
                 if solid {
                     let size = CGSize(width: node.size.width * 0.85, height: node.size.height * 0.88)
-                    surfaces.append(CGRect(x: node.position.x - size.width / 2,
+                    solidObstacleSurfaces.append(CGRect(x: node.position.x - size.width / 2,
                                            y: node.position.y - size.height / 2,
                                            width: size.width, height: size.height))
                 }
@@ -325,9 +327,8 @@ final class GameScene: AppSharedSceneBase {
             var position = point(item.devices)
             let offset = point(item.devices, .offset)
             position.x += offset.x
-            if item.useGravity ?? base?.useGravity ?? true {
-                position.y = determineGroundBaseY(x: position.x)
-                position.y += spriteSize.height/2
+            if (item.useGravity ?? base?.useGravity ?? true), let surface = groundSurfaceY(at: position.x) {
+                position.y = surface + spriteSize.height / 2
             }
             position.y += offset.y
             let frames = try data.animation(image, in: "Checkpoints", scene: self)
@@ -397,11 +398,16 @@ final class GameScene: AppSharedSceneBase {
         let halfWidth = playerBodySize.width / 2
         let left = player.position.x - halfWidth
         let right = player.position.x + halfWidth
-        return abs(player.physicsBody?.velocity.dy ?? 0) < 100 && surfaces.contains { surface in
+        guard abs(player.physicsBody?.velocity.dy ?? 0) < 100 else { return false }
+        if solidObstacleSurfaces.contains(where: { right > $0.minX && left < $0.maxX && abs(feet - $0.maxY) < 7 }) {
+            return true
+        }
+        return surfaces.contains { surface in
             guard right > surface.minX, left < surface.maxX else { return false }
             let start = max(left, surface.minX)
             let end = min(right, surface.maxX.nextDown)
-            let height = max(determineGroundBaseY(x: start), determineGroundBaseY(x: end))
+            guard let height = [groundSurfaceY(at: start), groundSurfaceY(at: end)].compactMap({ $0 }).max()
+            else { return false }
             return abs(feet - height) < 7
         }
     }
@@ -511,10 +517,10 @@ final class GameScene: AppSharedSceneBase {
         guard let node = other.node, !won, !pendingRespawn else { return }
         switch other.categoryBitMask {
         case Body.checkpoint:
-            guard !checkpointReached, node === beacon else { return }
+            let respawnX = node.position.x - 8
+            guard !checkpointReached, node === beacon, let foot = groundSurfaceY(at: respawnX) else { return }
             checkpointReached = true
-            let foot = determineGroundBaseY(x: node.position.x)
-            respawn = CGPoint(x: node.position.x-8, y: foot-playerBodyCenter.y+playerBodySize.height/2+2)
+            respawn = CGPoint(x: respawnX, y: foot-playerBodyCenter.y+playerBodySize.height/2+2)
             node.physicsBody = nil
             if !beaconFrames.isEmpty {
                 let requested = data.level.checkpoints?.animateFromImage ?? 0

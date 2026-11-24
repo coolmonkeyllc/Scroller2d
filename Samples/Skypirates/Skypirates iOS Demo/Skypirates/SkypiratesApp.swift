@@ -4,6 +4,7 @@
 
 import SpriteKit
 import UIKit
+import Scroller2d
 
 /// UIKit application entry point. Scroller2d is not used directly in this file; `GameScene` owns that integration.
 @main
@@ -14,10 +15,14 @@ final class SkypiratesWindowScene: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     /// Creates the app window, installs the game view controller, and displays it for the connected scene.
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
-               options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
-        let window = UIWindow(windowScene: windowScene)
+
+		let build = String(format: "%04d", LibraryVersion.getBuildNumber())
+		print("Scroller2d Api Library Version: \(LibraryVersion.getVersion()) (build \(build))")
+		print("Scroller2d Api Schema Version: \(LibraryVersion.getSchemaVersion())")
+
+		let window = UIWindow(windowScene: windowScene)
         window.rootViewController = GameViewController()
         self.window = window
         window.makeKeyAndVisible()
