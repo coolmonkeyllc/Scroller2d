@@ -394,10 +394,15 @@ final class GameScene: AppSharedSceneBase {
     /// Reports whether the player's feet rest on an assembled terrain surface.
     private var grounded: Bool {
         let feet = player.position.y + playerBodyCenter.y - playerBodySize.height/2
-        return abs(player.physicsBody?.velocity.dy ?? 0) < 40 && surfaces.contains {
-            player.position.x + playerBodySize.width/2 > $0.minX
-                && player.position.x - playerBodySize.width/2 < $0.maxX
-                && abs(feet - $0.maxY) < 7
+        let halfWidth = playerBodySize.width / 2
+        let left = player.position.x - halfWidth
+        let right = player.position.x + halfWidth
+        return abs(player.physicsBody?.velocity.dy ?? 0) < 100 && surfaces.contains { surface in
+            guard right > surface.minX, left < surface.maxX else { return false }
+            let start = max(left, surface.minX)
+            let end = min(right, surface.maxX.nextDown)
+            let height = max(determineGroundBaseY(x: start), determineGroundBaseY(x: end))
+            return abs(feet - height) < 7
         }
     }
 

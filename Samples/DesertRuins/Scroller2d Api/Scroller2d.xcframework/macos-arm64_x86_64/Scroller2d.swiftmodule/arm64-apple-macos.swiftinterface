@@ -26,7 +26,10 @@ public protocol SceneBaseContactDelegate : AnyObject {
   func didEndContact(_ contact: SpriteKit::SKPhysicsContact)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency::MainActor @preconcurrency open class AppSharedSceneBase : SpriteKit::SKScene, @_Concurrency::MainActor SpriteKit::SKPhysicsContactDelegate {
-  @_Concurrency::MainActor @preconcurrency public var groundBaseVariants: [CoreFoundation::CGRect]
+  @_Concurrency::MainActor @preconcurrency public var groundBaseVariants: [CoreFoundation::CGRect] {
+    get
+    set
+  }
   @_Concurrency::MainActor @preconcurrency public var collisionDirection: Scroller2d::pathDirection
   @_Concurrency::MainActor @preconcurrency public var alternateSceneLocked: Swift::Bool
   @_Concurrency::MainActor @preconcurrency public var alternateSceneLockedEndX: CoreFoundation::CGFloat
@@ -538,6 +541,7 @@ public enum groundPhysicsAngleType : Swift::String, Swift::CaseIterable, Swift::
   case edgeStraightDownRight
   case mirage
   case none
+  case texture
   public static var typeName: Swift::String {
     get
   }
@@ -1108,6 +1112,29 @@ public enum callbackType : Swift::String, Swift::CaseIterable, Swift::Codable, S
   @_Concurrency::MainActor final public func update(deltaTime: Foundation::TimeInterval)
   @objc deinit
 }
+public struct GroundCollisionLayout : Swift::Equatable {
+  public enum Shape : Swift::Equatable {
+    case rectangle(CoreFoundation::CGRect)
+    case edges([Scroller2d::GroundCollisionEdge])
+    case walkablePaths([[CoreFoundation::CGPoint]])
+    case textureTiles([CoreFoundation::CGRect])
+    public static func == (a: Scroller2d::GroundCollisionLayout.Scroller2d::Shape, b: Scroller2d::GroundCollisionLayout.Scroller2d::Shape) -> Swift::Bool
+  }
+  public let shape: Scroller2d::GroundCollisionLayout.Scroller2d::Shape
+  public let categoryBitMask: Swift::UInt32
+  public let collisionBitMask: Swift::UInt32
+  public let contactTestBitMask: Swift::UInt32
+  public let snappingHeight: CoreFoundation::CGFloat
+  public static func == (a: Scroller2d::GroundCollisionLayout, b: Scroller2d::GroundCollisionLayout) -> Swift::Bool
+}
+public struct GroundCollisionEdge : Swift::Equatable {
+  public let start: CoreFoundation::CGPoint
+  public let end: CoreFoundation::CGPoint
+  public static func == (a: Scroller2d::GroundCollisionEdge, b: Scroller2d::GroundCollisionEdge) -> Swift::Bool
+}
+@_Concurrency::MainActor public func CreateGroundCollisionHelper(section: Scroller2d::GroundSection, artworkSize: CoreFoundation::CGSize, tileFrames: [CoreFoundation::CGRect], rowsPerColumn: Swift::Int, collisionTopInset: CoreFoundation::CGFloat = 0, walkableSurface: [CoreFoundation::CGFloat?]? = nil) throws -> Scroller2d::GroundCollisionLayout
+public func SampleGroundSurface(layers: [(image: CoreGraphics::CGImage, size: CoreFoundation::CGSize)]) -> [CoreFoundation::CGFloat?]
+public func GroundWalkableHeight(paths: [[CoreFoundation::CGPoint]], x: CoreFoundation::CGFloat) -> CoreFoundation::CGFloat?
 public enum LevelAssemblyError : Swift::Error, Foundation::LocalizedError {
   case invalid(Swift::String)
   case unsupported(Swift::String)

@@ -33,7 +33,7 @@ See [downloads and licensing](https://scroller2d.com/Download#licensing).
 | Reset the run | **RESET** | R |
 | Toggle audio | **SOUND** | M |
 
-Jump the crate and run past the beacon. Its teal flag and **BEACON LIT** indicator show that it saved your position. Walk into the gap to demonstrate respawning, then hold right and jump near the lip to clear it. Jump the saw, slash the guardian from a short distance, jump the spikes, and touch the relic to open the Level End results. **Play Again** or **R** restores coins, the beacon, and enemies for another take.
+Jump the crate and run past the beacon. Its teal flag and **BEACON LIT** indicator show that it saved your position. Walk into the gap to demonstrate respawning, then hold right and jump near the lip to clear it. Jump the saw, slash the guardian from a short distance, jump the spikes, run up the sandstone slope to the plateau, and follow the steps down to the Sun Relic at ground level to open the Level End results. **Play Again** or **R** restores coins, the beacon, and enemies for another take.
 
 ## Where Scroller2D is used
 

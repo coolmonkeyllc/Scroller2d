@@ -293,7 +293,171 @@
 						</dict>
 					</array>
 					<key>repeatCount</key>
-					<integer>12</integer>
+					<integer>7</integer>
+					<key>zPosition</key>
+					<integer>50</integer>
+				</dict>
+				<dict>
+					<key>id</key>
+					<string>0AD725AC-AAF5-57B8-913D-B0349F1BED3E</string>
+					<key>groundType</key>
+					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
+					<key>image</key>
+					<string>sandstone_ramp</string>
+					<key>devices</key>
+					<array>
+						<dict>
+							<key>deviceName</key>
+							<string>defaultDevice</string>
+							<key>size</key>
+							<string>{192,104}</string>
+							<key>offset</key>
+							<string>{0,0}</string>
+						</dict>
+					</array>
+					<key>repeatCount</key>
+					<integer>1</integer>
+					<key>zPosition</key>
+					<integer>50</integer>
+					<key>groundPhysicsAngleType</key>
+					<string>angle</string>
+				</dict>
+				<dict>
+					<key>id</key>
+					<string>67D48DDC-980F-5B47-8DF0-0486F2925FEC</string>
+					<key>groundType</key>
+					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
+					<key>image</key>
+					<string>sandstone_foundation,sandstone</string>
+					<key>devices</key>
+					<array>
+						<dict>
+							<key>deviceName</key>
+							<string>defaultDevice</string>
+							<key>size</key>
+							<string>{96,52}</string>
+							<key>offset</key>
+							<string>{0,0}</string>
+						</dict>
+					</array>
+					<key>repeatCount</key>
+					<integer>1</integer>
+					<key>zPosition</key>
+					<integer>50</integer>
+					<key>groundPhysicsAngleType</key>
+					<string>angle</string>
+					<key>stack</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>id</key>
+					<string>BF825002-41F7-5E5B-9E61-C5EE55ED850D</string>
+					<key>groundType</key>
+					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
+					<key>image</key>
+					<string>sandstone</string>
+					<key>devices</key>
+					<array>
+						<dict>
+							<key>deviceName</key>
+							<string>defaultDevice</string>
+							<key>size</key>
+							<string>{96,44}</string>
+							<key>offset</key>
+							<string>{0,44}</string>
+						</dict>
+					</array>
+					<key>repeatCount</key>
+					<integer>1</integer>
+					<key>zPosition</key>
+					<integer>50</integer>
+					<key>groundPhysicsAngleType</key>
+					<string>angle</string>
+					<key>imageBottomLayer</key>
+					<string>sandstone_foundation</string>
+				</dict>
+				<dict>
+					<key>id</key>
+					<string>BA6712A7-A145-5548-8210-BCFBEADAD16F</string>
+					<key>groundType</key>
+					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
+					<key>image</key>
+					<string>sandstone</string>
+					<key>devices</key>
+					<array>
+						<dict>
+							<key>deviceName</key>
+							<string>defaultDevice</string>
+							<key>size</key>
+							<string>{96,36}</string>
+							<key>offset</key>
+							<string>{0,36}</string>
+						</dict>
+					</array>
+					<key>repeatCount</key>
+					<integer>1</integer>
+					<key>zPosition</key>
+					<integer>50</integer>
+					<key>groundPhysicsAngleType</key>
+					<string>angle</string>
+					<key>imageBottomLayer</key>
+					<string>sandstone_foundation</string>
+				</dict>
+				<dict>
+					<key>id</key>
+					<string>4AB0E634-11F1-5C01-BC22-EC9587C23CB9</string>
+					<key>groundType</key>
+					<string>Ground</string>
+					<key>collisionMasks</key>
+					<dict>
+						<key>category</key>
+						<string>staticObjectBody</string>
+						<key>collision</key>
+						<string>humanPlayer</string>
+					</dict>
+					<key>image</key>
+					<string>sandstone</string>
+					<key>devices</key>
+					<array>
+						<dict>
+							<key>deviceName</key>
+							<string>defaultDevice</string>
+							<key>size</key>
+							<string>{96,56}</string>
+							<key>offset</key>
+							<string>{0,0}</string>
+						</dict>
+					</array>
+					<key>repeatCount</key>
+					<integer>2</integer>
 					<key>zPosition</key>
 					<integer>50</integer>
 				</dict>
@@ -602,7 +766,7 @@
 								<key>offset</key>
 								<string>{0,0}</string>
 								<key>position</key>
-								<string>{1135,-67}</string>
+								<string>{1725,-67}</string>
 							</dict>
 						</array>
 						<key>useGravity</key>
@@ -682,7 +846,7 @@
 								<key>move</key>
 								<real>0.08</real>
 								<key>attack</key>
-								<real>0.07000000000000001</real>
+								<real>0.07</real>
 							</dict>
 						</dict>
 						<key>soundEffects</key>
@@ -788,7 +952,7 @@
 								<key>move</key>
 								<real>0.08</real>
 								<key>attack</key>
-								<real>0.07000000000000001</real>
+								<real>0.07</real>
 							</dict>
 						</dict>
 						<key>soundEffects</key>
@@ -1052,7 +1216,107 @@
 								<key>offset</key>
 								<string>{0,0}</string>
 								<key>position</key>
-								<string>{964,-87}</string>
+								<string>{978,-94}</string>
+							</dict>
+						</array>
+						<key>useGravity</key>
+						<false/>
+						<key>zPosition</key>
+						<integer>120</integer>
+					</dict>
+					<dict>
+						<key>id</key>
+						<string>8C156ED1-D33E-5FC0-B575-93E11BA444E4</string>
+						<key>elementName</key>
+						<string>sundrop_coin</string>
+						<key>image</key>
+						<string>sundrop_coin</string>
+						<key>devices</key>
+						<array>
+							<dict>
+								<key>deviceName</key>
+								<string>defaultDevice</string>
+								<key>size</key>
+								<string>{26,26}</string>
+								<key>offset</key>
+								<string>{0,0}</string>
+								<key>position</key>
+								<string>{1162,-68}</string>
+							</dict>
+						</array>
+						<key>useGravity</key>
+						<false/>
+						<key>zPosition</key>
+						<integer>120</integer>
+					</dict>
+					<dict>
+						<key>id</key>
+						<string>44781EAE-EE57-5FE2-A731-8170B00A1FA7</string>
+						<key>elementName</key>
+						<string>sundrop_coin</string>
+						<key>image</key>
+						<string>sundrop_coin</string>
+						<key>devices</key>
+						<array>
+							<dict>
+								<key>deviceName</key>
+								<string>defaultDevice</string>
+								<key>size</key>
+								<string>{26,26}</string>
+								<key>offset</key>
+								<string>{0,0}</string>
+								<key>position</key>
+								<string>{1310,-60}</string>
+							</dict>
+						</array>
+						<key>useGravity</key>
+						<false/>
+						<key>zPosition</key>
+						<integer>120</integer>
+					</dict>
+					<dict>
+						<key>id</key>
+						<string>EF93E855-B33D-545A-AC40-01123764BE94</string>
+						<key>elementName</key>
+						<string>sundrop_coin</string>
+						<key>image</key>
+						<string>sundrop_coin</string>
+						<key>devices</key>
+						<array>
+							<dict>
+								<key>deviceName</key>
+								<string>defaultDevice</string>
+								<key>size</key>
+								<string>{26,26}</string>
+								<key>offset</key>
+								<string>{0,0}</string>
+								<key>position</key>
+								<string>{1459,-74}</string>
+							</dict>
+						</array>
+						<key>useGravity</key>
+						<false/>
+						<key>zPosition</key>
+						<integer>120</integer>
+					</dict>
+					<dict>
+						<key>id</key>
+						<string>EC9A2796-F60D-5391-A3B7-A019C189A9BD</string>
+						<key>elementName</key>
+						<string>sundrop_coin</string>
+						<key>image</key>
+						<string>sundrop_coin</string>
+						<key>devices</key>
+						<array>
+							<dict>
+								<key>deviceName</key>
+								<string>defaultDevice</string>
+								<key>size</key>
+								<string>{26,26}</string>
+								<key>offset</key>
+								<string>{0,0}</string>
+								<key>position</key>
+								<string>{1555,-90}</string>
 							</dict>
 						</array>
 						<key>useGravity</key>
@@ -1091,7 +1355,7 @@
 								<key>offset</key>
 								<string>{0,0}</string>
 								<key>position</key>
-								<string>{1135,-101}</string>
+								<string>{1725,-101}</string>
 							</dict>
 						</array>
 						<key>zPosition</key>
